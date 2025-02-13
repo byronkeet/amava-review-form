@@ -36,9 +36,9 @@ export const SliderCard: React.FC<SliderCardProps> = ({
       exit={{ opacity: 0, y: -20 }}
       className="w-full max-w-2xl p-6 sm:p-8"
     >
-      <div className="space-y-6">
-        <div className="space-y-4">
-          <h2 className="text-gray-700 text-lg sm:text-xl font-medium">
+      <div className="space-y-6 sm:space-y-8">
+        <div className="space-y-4 sm:space-y-6">
+          <h2 className="text-2xl sm:text-4xl font-bold text-gray-900">
             {question}
           </h2>
           <div className="space-y-3">
