@@ -17,6 +17,7 @@ export interface Translation {
     signature: string;
     travelAgent: string;
     experienceStatement: string;
+    wildlifeExperience: string;
   };
   placeholders: {
     fullName: string;
@@ -81,6 +82,7 @@ export const translations: Record<LanguageCode, Translation> = {
       termsAccepted: 'I accept the terms & conditions of the Indemnity, Waiver & Disclaimer Form.',
       signature: 'Please sign below to complete the form',
       experienceStatement: ', we pride ourselves on giving a world class wildlife experience. Please rate the experience you had.',
+      wildlifeExperience: 'Overall Wildlife Experience',
     },
     placeholders: {
       fullName: 'Enter your full name',
@@ -130,6 +132,7 @@ export const translations: Record<LanguageCode, Translation> = {
       termsAccepted: 'Acepto los términos y condiciones del Formulario de Indemnización, Renuncia y Descargo.',
       signature: 'Por favor firme abajo para completar el formulario',
       experienceStatement: ', nos enorgullecemos de ofrecer una experiencia de vida silvestre de clase mundial. Por favor, califique la experiencia que tuvo.',
+      wildlifeExperience: 'Experiencia General con la Vida Silvestre',
     },
     placeholders: {
       fullName: 'Ingrese su nombre completo',
@@ -179,6 +182,7 @@ export const translations: Record<LanguageCode, Translation> = {
       termsAccepted: 'J\'accepte les termes et conditions du formulaire d\'indemnisation, de renonciation et de décharge.',
       signature: 'Veuillez signer ci-dessous pour compléter le formulaire',
       experienceStatement: ', nous sommes fiers d\'offrir une expérience de la faune de classe mondiale. Veuillez évaluer l\'expérience que vous avez eue.',
+      wildlifeExperience: 'Expérience Globale de la Faune',
     },
     placeholders: {
       fullName: 'Entrez votre nom complet',
@@ -228,6 +232,7 @@ export const translations: Record<LanguageCode, Translation> = {
       termsAccepted: 'Ich akzeptiere die Bedingungen des Entschädigungs-, Verzichts- und Haftungsausschlussformulars.',
       signature: 'Bitte unterschreiben Sie unten, um das Formular abzuschließen',
       experienceStatement: ', wir sind stolz darauf, ein erstklassiges Wildtier-Erlebnis zu bieten. Bitte bewerten Sie Ihre Erfahrung.',
+      wildlifeExperience: 'Gesamte Wildlife-Erfahrung',
     },
     placeholders: {
       fullName: 'Geben Sie Ihren vollständigen Namen ein',
@@ -277,6 +282,7 @@ export const translations: Record<LanguageCode, Translation> = {
       termsAccepted: 'Ik accepteer de voorwaarden van het vrijwarings-, afstands- en disclaimerformulier.',
       signature: 'Teken hieronder om het formulier te voltooien',
       experienceStatement: ', we zijn er trots op een wereldklasse wildlife-ervaring te bieden. Beoordeel alstublieft uw ervaring.',
+      wildlifeExperience: 'Algemene Wildlife Ervaring',
     },
     placeholders: {
       fullName: 'Voer uw volledige naam in',
@@ -326,6 +332,7 @@ export const translations: Record<LanguageCode, Translation> = {
       termsAccepted: 'Accetto i termini e le condizioni del modulo di indennizzo, rinuncia e dichiarazione di non responsabilità.',
       signature: 'Per favore firma qui sotto per completare il modulo',
       experienceStatement: ', siamo orgogliosi di offrire un\'esperienza naturalistica di livello mondiale. Per favore valuta l\'esperienza che hai avuto.',
+      wildlifeExperience: 'Esperienza Complessiva della Fauna Selvatica',
     },
     placeholders: {
       fullName: 'Inserisci il tuo nome completo',
@@ -375,6 +382,7 @@ export const translations: Record<LanguageCode, Translation> = {
       termsAccepted: 'Я принимаю условия формы об освобождении от ответственности, отказе от претензий и оговорке.',
       signature: 'Пожалуйста, поставьте подпись ниже, чтобы завершить форму',
       experienceStatement: ', мы гордимся тем, что предоставляем первоклассный опыт наблюдения за дикой природой. Пожалуйста, оцените ваш опыт.',
+      wildlifeExperience: 'Общее Впечатление от Дикой Природы',
     },
     placeholders: {
       fullName: 'Введите ваше полное имя',
@@ -424,6 +432,7 @@ export const translations: Record<LanguageCode, Translation> = {
       termsAccepted: '我接受赔偿、豁免和免责声明表格的条款和条件。',
       signature: '请在下方签名以完成表格',
       experienceStatement: '，我们以提供世界级的野生动物体验为荣。请为您的体验打分。',
+      wildlifeExperience: '整体野生动物体验',
     },
     placeholders: {
       fullName: '请输入您的全名',
