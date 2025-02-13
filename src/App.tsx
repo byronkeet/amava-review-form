@@ -17,6 +17,7 @@ import { SliderCard } from "./components/SliderCard";
 import { RatingCard } from "./components/RatingCard";
 import { MultiSelectCard } from "./components/MultiSelectCard";
 import { MultiSelectDropdownCard } from "./components/MultiSelectDropdownCard";
+import { SingleSelectCard } from "./components/SingleSelectCard";
 
 const guides = ["Amos", "KG", "Tony", "Ness"];
 
@@ -165,6 +166,12 @@ const createQuestions = (lang: LanguageCode): Question[] => [
     type: "text",
     question: translations[lang].questions.hospitalityComments,
     placeholder: translations[lang].placeholders.hospitalityComments,
+  },
+  {
+    id: "recommendTuludi",
+    type: "singleselect",
+    question: translations[lang].questions.recommendTuludi,
+    options: [translations[lang].buttons.yes, translations[lang].buttons.no],
   },
   {
     id: "birthday",
@@ -543,6 +550,28 @@ function App() {
             setFormState((prev) => ({
               ...prev,
               [question.id]: JSON.stringify(values),
+            }));
+          }}
+          currentIndex={currentQuestion}
+          totalQuestions={questions.length}
+          onBack={handleBack}
+          onNext={() => handleNext(formState[question.id])}
+          backText={translations[language].buttons.back}
+          nextText={translations[language].buttons.next}
+        />
+      );
+    }
+    if (question.type === "singleselect") {
+      return (
+        <SingleSelectCard
+          question={question.question}
+          subtitle={question.subtitle}
+          options={question.options || []}
+          selectedValue={(formState[question.id] as string) || ""}
+          onChange={(value) => {
+            setFormState((prev) => ({
+              ...prev,
+              [question.id]: value,
             }));
           }}
           currentIndex={currentQuestion}

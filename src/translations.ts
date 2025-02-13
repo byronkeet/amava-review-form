@@ -35,6 +35,7 @@ export interface Translation {
     staffStandout: string;
     staffStandoutSubtitle: string;
     hospitalityComments: string;
+    recommendTuludi: string;
   };
   placeholders: {
     fullName: string;
@@ -125,6 +126,7 @@ export const translations: Record<LanguageCode, Translation> = {
       staffStandoutSubtitle: "Choose as many as you like",
       hospitalityComments:
         "Any further comments or recommendations about our hospitality?",
+      recommendTuludi: "Would you recommend Tuludi to your friends?",
     },
     placeholders: {
       fullName: "Enter your full name",
@@ -202,6 +204,7 @@ export const translations: Record<LanguageCode, Translation> = {
       staffStandoutSubtitle: "Elige tantos como quieras",
       hospitalityComments:
         "¿Algún comentario o recomendación adicional sobre nuestra hospitalidad?",
+      recommendTuludi: "¿Recomendarías Tuludi a tus amigos?",
     },
     placeholders: {
       fullName: "Ingrese su nombre completo",
@@ -279,6 +282,7 @@ export const translations: Record<LanguageCode, Translation> = {
       staffStandoutSubtitle: "Choisissez autant que vous le souhaitez",
       hospitalityComments:
         "Avez-vous d'autres commentaires ou recommandations concernant notre hospitalité ?",
+      recommendTuludi: "Recommanderiez-vous Tuludi à vos amis ?",
     },
     placeholders: {
       fullName: "Entrez votre nom complet",
@@ -357,6 +361,7 @@ export const translations: Record<LanguageCode, Translation> = {
       staffStandoutSubtitle: "Wählen Sie so viele wie Sie möchten",
       hospitalityComments:
         "Haben Sie weitere Kommentare oder Empfehlungen zu unserer Gastfreundschaft?",
+      recommendTuludi: "Würden Sie Tuludi Ihren Freunden empfehlen?",
     },
     placeholders: {
       fullName: "Geben Sie Ihren vollständigen Namen ein",
@@ -434,6 +439,7 @@ export const translations: Record<LanguageCode, Translation> = {
       staffStandoutSubtitle: "Kies zoveel als je wilt",
       hospitalityComments:
         "Heeft u nog andere opmerkingen of aanbevelingen over onze gastvrijheid?",
+      recommendTuludi: "Zou u Tuludi aanbevelen aan uw vrienden?",
     },
     placeholders: {
       fullName: "Voer uw volledige naam in",
@@ -511,6 +517,7 @@ export const translations: Record<LanguageCode, Translation> = {
       staffStandoutSubtitle: "Scegli quanti ne vuoi",
       hospitalityComments:
         "Hai altri commenti o suggerimenti sulla nostra ospitalità?",
+      recommendTuludi: "Consiglieresti Tuludi ai tuoi amici?",
     },
     placeholders: {
       fullName: "Inserisci il tuo nome completo",
@@ -588,6 +595,7 @@ export const translations: Record<LanguageCode, Translation> = {
       staffStandoutSubtitle: "Выберите столько, сколько хотите",
       hospitalityComments:
         "Есть ли у вас дополнительные комментарии или рекомендации о нашем гостеприимстве?",
+      recommendTuludi: "Порекомендовали бы вы Tuludi своим друзьям?",
     },
     placeholders: {
       fullName: "Введите ваше полное имя",
@@ -659,6 +667,7 @@ export const translations: Record<LanguageCode, Translation> = {
       staffStandout: "有谁特别出色吗？",
       staffStandoutSubtitle: "可以选择多个",
       hospitalityComments: "对我们的待客之道有任何其他意见或建议吗？",
+      recommendTuludi: "您会向朋友推荐Tuludi吗？",
     },
     placeholders: {
       fullName: "请输入您的全名",

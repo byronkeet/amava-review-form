@@ -12,7 +12,8 @@ export interface Question {
     | "slider"
     | "rating"
     | "multiselect"
-    | "multiselectdropdown";
+    | "multiselectdropdown"
+    | "singleselect";
   question: string | JSX.Element;
   subtitle?: string;
   placeholder?: string;
