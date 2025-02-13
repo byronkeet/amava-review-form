@@ -157,7 +157,7 @@ function App() {
     }
   }, [currentQuestion, formState, questions]);
 
-  const handleSubmit = async () => {
+  const handleSubmit = useCallback(async () => {
     setIsSubmitting(true);
     try {
       const { error } = await supabase.from("indemnity").insert([
@@ -193,7 +193,7 @@ function App() {
     } finally {
       setIsSubmitting(false);
     }
-  };
+  }, [formState, language, setIsSubmitting, setIsCompleted]);
 
   const handleNext = useCallback(
     (value: string | boolean) => {
@@ -232,7 +232,7 @@ function App() {
         handleSubmit();
       }
     },
-    [currentQuestion, formState, questions]
+    [currentQuestion, formState, questions, handleSubmit]
   );
 
   const handleKeyPress = useCallback(
@@ -330,7 +330,7 @@ function App() {
     if (question.type === "statement") {
       return (
         <StatementCard
-          name={formState.fullName || ""}
+          name={(formState.fullName as string) || ""}
           statement={question.question}
           currentIndex={currentQuestion}
           totalQuestions={questions.length}

@@ -1,9 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface QuestionCardProps {
-  question: string;
+  question: string | JSX.Element;
   children: React.ReactNode;
   currentIndex: number;
   totalQuestions: number;
@@ -24,10 +24,10 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
   onNext,
   currentValue,
   showBackButton = true,
-  backText = 'Back',
-  nextText = 'Next',
+  backText = "Back",
+  nextText = "Next",
 }) => {
-  const canProgress = currentValue !== undefined && currentValue !== '';
+  const canProgress = currentValue !== undefined && currentValue !== "";
 
   return (
     <motion.div
@@ -38,10 +38,10 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
     >
       <div className="space-y-6 sm:space-y-8">
         <div className="space-y-4 sm:space-y-6">
-          <h2 className="text-2xl sm:text-4xl font-bold text-gray-900">{question}</h2>
-          <div className="relative">
-            {children}
-          </div>
+          <h2 className="text-2xl sm:text-4xl font-bold text-gray-900">
+            {question}
+          </h2>
+          <div className="relative">{children}</div>
         </div>
         <div className="flex items-center justify-between text-gray-500 text-sm sm:text-base">
           <div className="flex items-center gap-2 sm:gap-4">
@@ -57,14 +57,16 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
             )}
           </div>
           <div className="flex items-center gap-2 sm:gap-4">
-            <span>{currentIndex + 1}/{totalQuestions}</span>
+            <span>
+              {currentIndex + 1}/{totalQuestions}
+            </span>
             {onNext && (
               <button
                 onClick={() => canProgress && onNext(currentValue)}
                 className={`flex items-center gap-1 sm:gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg transition-colors ${
                   canProgress
-                    ? 'text-[#b4854b] hover:bg-[#b4854b]/10'
-                    : 'opacity-50 cursor-not-allowed text-gray-400'
+                    ? "text-[#b4854b] hover:bg-[#b4854b]/10"
+                    : "opacity-50 cursor-not-allowed text-gray-400"
                 }`}
                 disabled={!canProgress}
               >

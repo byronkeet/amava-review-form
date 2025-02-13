@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface SliderCardProps {
-  question: string;
+  question: string | JSX.Element;
   currentValue: number;
   min: number;
   max: number;
