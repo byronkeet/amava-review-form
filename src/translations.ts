@@ -38,6 +38,8 @@ export interface Translation {
     recommendTuludi: string;
     communicationStatement: string;
     communicationSubtitle: string;
+    communicationRating: string;
+    communicationRatingSubtitle: string;
   };
   placeholders: {
     fullName: string;
@@ -132,6 +134,9 @@ export const translations: Record<LanguageCode, Translation> = {
       communicationStatement: "We know communication is key.",
       communicationSubtitle:
         "We aim to listen, learn, and elevate—your voice ensures we keep raising the bar.",
+      communicationRating: "Communication",
+      communicationRatingSubtitle:
+        "Rate our pre-arrival, check-in and daily communication.",
     },
     placeholders: {
       fullName: "Enter your full name",
@@ -213,6 +218,9 @@ export const translations: Record<LanguageCode, Translation> = {
       communicationStatement: "Sabemos que la comunicación es clave.",
       communicationSubtitle:
         "Nuestro objetivo es escuchar, aprender y mejorar—tu voz nos asegura seguir elevando el nivel.",
+      communicationRating: "Comunicación",
+      communicationRatingSubtitle:
+        "Evalúe nuestra comunicación previa a la llegada, el registro y la comunicación diaria.",
     },
     placeholders: {
       fullName: "Ingrese su nombre completo",
@@ -295,6 +303,9 @@ export const translations: Record<LanguageCode, Translation> = {
         "Nous savons que la communication est essentielle.",
       communicationSubtitle:
         "Notre objectif est d'écouter, d'apprendre et de progresser—votre voix nous aide à continuer à élever la barre.",
+      communicationRating: "Communication",
+      communicationRatingSubtitle:
+        "Évaluez notre communication avant l'arrivée, à l'enregistrement et au quotidien.",
     },
     placeholders: {
       fullName: "Entrez votre nom complet",
@@ -378,6 +389,9 @@ export const translations: Record<LanguageCode, Translation> = {
         "Wir wissen, dass Kommunikation der Schlüssel ist.",
       communicationSubtitle:
         "Unser Ziel ist es zu zuhören, zu lernen und uns weiterzuentwickeln—Ihre Stimme hilft uns dabei, die Messlatte immer höher zu legen.",
+      communicationRating: "Kommunikation",
+      communicationRatingSubtitle:
+        "Bewerten Sie unsere Kommunikation vor der Ankunft, beim Check-in und im täglichen Ablauf.",
     },
     placeholders: {
       fullName: "Geben Sie Ihren vollständigen Namen ein",
@@ -459,6 +473,9 @@ export const translations: Record<LanguageCode, Translation> = {
       communicationStatement: "We weten dat communicatie essentieel is.",
       communicationSubtitle:
         "Ons doel is om te luisteren, te leren en te verbeteren—uw stem zorgt ervoor dat we de lat steeds hoger leggen.",
+      communicationRating: "Communicatie",
+      communicationRatingSubtitle:
+        "Beoordeel onze communicatie voor aankomst, bij inchecken en dagelijkse communicatie.",
     },
     placeholders: {
       fullName: "Voer uw volledige naam in",
@@ -540,6 +557,9 @@ export const translations: Record<LanguageCode, Translation> = {
       communicationStatement: "Sappiamo che la comunicazione è fondamentale.",
       communicationSubtitle:
         "Il nostro obiettivo è ascoltare, imparare e migliorare—la vostra voce ci assicura di continuare ad alzare l'asticella.",
+      communicationRating: "Comunicazione",
+      communicationRatingSubtitle:
+        "Valuta la nostra comunicazione pre-arrivo, check-in e comunicazione quotidiana.",
     },
     placeholders: {
       fullName: "Inserisci il tuo nome completo",
@@ -621,6 +641,9 @@ export const translations: Record<LanguageCode, Translation> = {
       communicationStatement: "Мы знаем, что коммуникация - это ключ к успеху.",
       communicationSubtitle:
         "Наша цель - слушать, учиться и развиваться—ваш голос помогает нам постоянно повышать планку.",
+      communicationRating: "Коммуникация",
+      communicationRatingSubtitle:
+        "Оцените нашу коммуникацию до прибытия, при регистрации и ежедневное общение.",
     },
     placeholders: {
       fullName: "Введите ваше полное имя",
@@ -696,6 +719,8 @@ export const translations: Record<LanguageCode, Translation> = {
       communicationStatement: "我们深知沟通至关重要。",
       communicationSubtitle:
         "我们致力于倾听、学习和提升—您的声音确保我们不断提高标准。",
+      communicationRating: "沟通",
+      communicationRatingSubtitle: "评价我们的到达前、登记入住和日常沟通。",
     },
     placeholders: {
       fullName: "请输入您的全名",

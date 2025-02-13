@@ -5,6 +5,7 @@ import { Circle } from "lucide-react";
 
 interface RatingCardProps {
   question: string | JSX.Element;
+  subtitle?: string;
   currentValue?: number;
   onChange: (value: number) => void;
   currentIndex: number;
@@ -17,6 +18,7 @@ interface RatingCardProps {
 
 export const RatingCard: React.FC<RatingCardProps> = ({
   question,
+  subtitle,
   currentValue,
   onChange,
   currentIndex,
@@ -40,9 +42,14 @@ export const RatingCard: React.FC<RatingCardProps> = ({
     >
       <div className="space-y-6 sm:space-y-8">
         <div className="space-y-4 sm:space-y-6">
-          <h2 className="text-2xl sm:text-4xl font-bold text-gray-900">
-            {question}
-          </h2>
+          <div className="space-y-2">
+            <h2 className="text-2xl sm:text-4xl font-bold text-gray-900">
+              {question}
+            </h2>
+            {subtitle && (
+              <p className="text-base sm:text-lg text-gray-600">{subtitle}</p>
+            )}
+          </div>
           <div className="flex justify-center pt-3">
             <div
               className="inline-flex gap-1 sm:gap-2 bg-transparent px-2 py-1"

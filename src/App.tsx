@@ -180,6 +180,12 @@ const createQuestions = (lang: LanguageCode): Question[] => [
     subtitle: translations[lang].questions.communicationSubtitle,
   },
   {
+    id: "communicationRating",
+    type: "rating",
+    question: translations[lang].questions.communicationRating,
+    subtitle: translations[lang].questions.communicationRatingSubtitle,
+  },
+  {
     id: "birthday",
     type: "date",
     question: translations[lang].questions.birthday,
@@ -499,6 +505,7 @@ function App() {
       return (
         <RatingCard
           question={question.question}
+          subtitle={question.subtitle}
           currentValue={Number(formState[question.id])}
           onChange={(value) => {
             setFormState((prev) => ({
