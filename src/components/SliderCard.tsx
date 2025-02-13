@@ -41,7 +41,7 @@ export const SliderCard: React.FC<SliderCardProps> = ({
           <h2 className="text-2xl sm:text-4xl font-bold text-gray-900">
             {question}
           </h2>
-          <div className="space-y-3">
+          <div className="space-y-3 pt-4">
             <input
               type="range"
               min={min}
