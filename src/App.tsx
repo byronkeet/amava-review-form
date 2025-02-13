@@ -15,8 +15,11 @@ import tuludiLogo from "/tuludi-logo.jpg";
 import { StatementCard } from "./components/StatementCard";
 import { SliderCard } from "./components/SliderCard";
 import { RatingCard } from "./components/RatingCard";
+import { MultiSelectCard } from "./components/MultiSelectCard";
 
 const guides = ["Amos", "KG", "Tony", "Ness"];
+
+const animals = ["Lion", "Elephant", "Leopard", "Cheetah", "Buffalo", "Other"];
 
 const createQuestions = (lang: LanguageCode): Question[] => [
   {
@@ -74,6 +77,13 @@ const createQuestions = (lang: LanguageCode): Question[] => [
     id: "guideRating",
     type: "rating",
     question: translations[lang].questions.guideRating,
+  },
+  {
+    id: "keySightings",
+    type: "multiselect",
+    question: translations[lang].questions.keySightings,
+    subtitle: translations[lang].questions.keySightingsSubtitle,
+    options: animals,
   },
   {
     id: "birthday",
@@ -399,6 +409,32 @@ function App() {
             setFormState((prev) => ({
               ...prev,
               [question.id]: value.toString(),
+            }));
+          }}
+          currentIndex={currentQuestion}
+          totalQuestions={questions.length}
+          onBack={handleBack}
+          onNext={() => handleNext(formState[question.id])}
+          backText={translations[language].buttons.back}
+          nextText={translations[language].buttons.next}
+        />
+      );
+    }
+    if (question.type === "multiselect") {
+      return (
+        <MultiSelectCard
+          question={question.question as string}
+          subtitle={question.subtitle}
+          options={question.options || []}
+          selectedValues={
+            formState[question.id]
+              ? JSON.parse(formState[question.id] as string)
+              : []
+          }
+          onChange={(values) => {
+            setFormState((prev) => ({
+              ...prev,
+              [question.id]: JSON.stringify(values),
             }));
           }}
           currentIndex={currentQuestion}

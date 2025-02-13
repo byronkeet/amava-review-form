@@ -10,8 +10,10 @@ export interface Question {
     | "signature"
     | "language"
     | "slider"
-    | "rating";
+    | "rating"
+    | "multiselect";
   question: string | JSX.Element;
+  subtitle?: string;
   placeholder?: string;
   options?: string[];
   min?: number;

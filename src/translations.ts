@@ -20,6 +20,8 @@ export interface Translation {
     wildlifeExperience: string;
     guide: string;
     guideRating: string;
+    keySightings: string;
+    keySightingsSubtitle: string;
   };
   placeholders: {
     fullName: string;
@@ -90,6 +92,8 @@ export const translations: Record<LanguageCode, Translation> = {
       wildlifeExperience: "Overall Wildlife Experience",
       guide: "Your Guide",
       guideRating: "Rate Your Guide",
+      keySightings: "Key Sightings",
+      keySightingsSubtitle: "Select which animals you saw on your game drive",
     },
     placeholders: {
       fullName: "Enter your full name",
@@ -146,6 +150,8 @@ export const translations: Record<LanguageCode, Translation> = {
       wildlifeExperience: "Experiencia General con la Vida Silvestre",
       guide: "Tu Guía",
       guideRating: "Califica a Tu Guía",
+      keySightings: "Avistamientos Principales",
+      keySightingsSubtitle: "Selecciona qué animales viste en tu safari",
     },
     placeholders: {
       fullName: "Ingrese su nombre completo",
@@ -201,6 +207,9 @@ export const translations: Record<LanguageCode, Translation> = {
       wildlifeExperience: "Expérience Globale de la Faune",
       guide: "Votre Guide",
       guideRating: "Évaluez Votre Guide",
+      keySightings: "Observations Principales",
+      keySightingsSubtitle:
+        "Sélectionnez les animaux que vous avez vus lors de votre safari",
     },
     placeholders: {
       fullName: "Entrez votre nom complet",
@@ -257,6 +266,9 @@ export const translations: Record<LanguageCode, Translation> = {
       wildlifeExperience: "Gesamte Wildlife-Erfahrung",
       guide: "Ihr Guide",
       guideRating: "Bewerten Sie Ihren Guide",
+      keySightings: "Wichtige Sichtungen",
+      keySightingsSubtitle:
+        "Wählen Sie aus, welche Tiere Sie auf Ihrer Safaritour gesehen haben",
     },
     placeholders: {
       fullName: "Geben Sie Ihren vollständigen Namen ein",
@@ -312,6 +324,9 @@ export const translations: Record<LanguageCode, Translation> = {
       wildlifeExperience: "Algemene Wildlife Ervaring",
       guide: "Uw Gids",
       guideRating: "Beoordeel Uw Gids",
+      keySightings: "Belangrijke Waarnemingen",
+      keySightingsSubtitle:
+        "Selecteer welke dieren u heeft gezien tijdens uw gamedrive",
     },
     placeholders: {
       fullName: "Voer uw volledige naam in",
@@ -367,6 +382,9 @@ export const translations: Record<LanguageCode, Translation> = {
       wildlifeExperience: "Esperienza Complessiva della Fauna Selvatica",
       guide: "La Tua Guida",
       guideRating: "Valuta La Tua Guida",
+      keySightings: "Avvistamenti Principali",
+      keySightingsSubtitle:
+        "Seleziona quali animali hai visto durante il tuo safari",
     },
     placeholders: {
       fullName: "Inserisci il tuo nome completo",
@@ -422,6 +440,9 @@ export const translations: Record<LanguageCode, Translation> = {
       wildlifeExperience: "Общее Впечатление от Дикой Природы",
       guide: "Ваш Гид",
       guideRating: "Оцените Вашего Гида",
+      keySightings: "Ключевые Наблюдения",
+      keySightingsSubtitle:
+        "Выберите, каких животных вы видели во время сафари",
     },
     placeholders: {
       fullName: "Введите ваше полное имя",
@@ -476,6 +497,8 @@ export const translations: Record<LanguageCode, Translation> = {
       wildlifeExperience: "整体野生动物体验",
       guide: "您的向导",
       guideRating: "评价您的向导",
+      keySightings: "重要观察",
+      keySightingsSubtitle: "选择您在游猎过程中看到的动物",
     },
     placeholders: {
       fullName: "请输入您的全名",
