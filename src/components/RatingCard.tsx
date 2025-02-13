@@ -4,7 +4,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Circle } from "lucide-react";
 
 interface RatingCardProps {
-  question: string;
+  question: string | JSX.Element;
   currentValue?: number;
   onChange: (value: number) => void;
   currentIndex: number;
