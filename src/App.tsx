@@ -174,6 +174,12 @@ const createQuestions = (lang: LanguageCode): Question[] => [
     options: [translations[lang].buttons.yes, translations[lang].buttons.no],
   },
   {
+    id: "communicationStatement",
+    type: "statement",
+    question: translations[lang].questions.communicationStatement,
+    subtitle: translations[lang].questions.communicationSubtitle,
+  },
+  {
     id: "birthday",
     type: "date",
     question: translations[lang].questions.birthday,

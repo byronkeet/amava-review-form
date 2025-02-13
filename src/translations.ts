@@ -36,6 +36,8 @@ export interface Translation {
     staffStandoutSubtitle: string;
     hospitalityComments: string;
     recommendTuludi: string;
+    communicationStatement: string;
+    communicationSubtitle: string;
   };
   placeholders: {
     fullName: string;
@@ -127,6 +129,9 @@ export const translations: Record<LanguageCode, Translation> = {
       hospitalityComments:
         "Any further comments or recommendations about our hospitality?",
       recommendTuludi: "Would you recommend Tuludi to your friends?",
+      communicationStatement: "We know communication is key.",
+      communicationSubtitle:
+        "We aim to listen, learn, and elevate—your voice ensures we keep raising the bar.",
     },
     placeholders: {
       fullName: "Enter your full name",
@@ -205,6 +210,9 @@ export const translations: Record<LanguageCode, Translation> = {
       hospitalityComments:
         "¿Algún comentario o recomendación adicional sobre nuestra hospitalidad?",
       recommendTuludi: "¿Recomendarías Tuludi a tus amigos?",
+      communicationStatement: "Sabemos que la comunicación es clave.",
+      communicationSubtitle:
+        "Nuestro objetivo es escuchar, aprender y mejorar—tu voz nos asegura seguir elevando el nivel.",
     },
     placeholders: {
       fullName: "Ingrese su nombre completo",
@@ -283,6 +291,10 @@ export const translations: Record<LanguageCode, Translation> = {
       hospitalityComments:
         "Avez-vous d'autres commentaires ou recommandations concernant notre hospitalité ?",
       recommendTuludi: "Recommanderiez-vous Tuludi à vos amis ?",
+      communicationStatement:
+        "Nous savons que la communication est essentielle.",
+      communicationSubtitle:
+        "Notre objectif est d'écouter, d'apprendre et de progresser—votre voix nous aide à continuer à élever la barre.",
     },
     placeholders: {
       fullName: "Entrez votre nom complet",
@@ -362,6 +374,10 @@ export const translations: Record<LanguageCode, Translation> = {
       hospitalityComments:
         "Haben Sie weitere Kommentare oder Empfehlungen zu unserer Gastfreundschaft?",
       recommendTuludi: "Würden Sie Tuludi Ihren Freunden empfehlen?",
+      communicationStatement:
+        "Wir wissen, dass Kommunikation der Schlüssel ist.",
+      communicationSubtitle:
+        "Unser Ziel ist es zu zuhören, zu lernen und uns weiterzuentwickeln—Ihre Stimme hilft uns dabei, die Messlatte immer höher zu legen.",
     },
     placeholders: {
       fullName: "Geben Sie Ihren vollständigen Namen ein",
@@ -440,6 +456,9 @@ export const translations: Record<LanguageCode, Translation> = {
       hospitalityComments:
         "Heeft u nog andere opmerkingen of aanbevelingen over onze gastvrijheid?",
       recommendTuludi: "Zou u Tuludi aanbevelen aan uw vrienden?",
+      communicationStatement: "We weten dat communicatie essentieel is.",
+      communicationSubtitle:
+        "Ons doel is om te luisteren, te leren en te verbeteren—uw stem zorgt ervoor dat we de lat steeds hoger leggen.",
     },
     placeholders: {
       fullName: "Voer uw volledige naam in",
@@ -518,6 +537,9 @@ export const translations: Record<LanguageCode, Translation> = {
       hospitalityComments:
         "Hai altri commenti o suggerimenti sulla nostra ospitalità?",
       recommendTuludi: "Consiglieresti Tuludi ai tuoi amici?",
+      communicationStatement: "Sappiamo che la comunicazione è fondamentale.",
+      communicationSubtitle:
+        "Il nostro obiettivo è ascoltare, imparare e migliorare—la vostra voce ci assicura di continuare ad alzare l'asticella.",
     },
     placeholders: {
       fullName: "Inserisci il tuo nome completo",
@@ -596,6 +618,9 @@ export const translations: Record<LanguageCode, Translation> = {
       hospitalityComments:
         "Есть ли у вас дополнительные комментарии или рекомендации о нашем гостеприимстве?",
       recommendTuludi: "Порекомендовали бы вы Tuludi своим друзьям?",
+      communicationStatement: "Мы знаем, что коммуникация - это ключ к успеху.",
+      communicationSubtitle:
+        "Наша цель - слушать, учиться и развиваться—ваш голос помогает нам постоянно повышать планку.",
     },
     placeholders: {
       fullName: "Введите ваше полное имя",
@@ -668,6 +693,9 @@ export const translations: Record<LanguageCode, Translation> = {
       staffStandoutSubtitle: "可以选择多个",
       hospitalityComments: "对我们的待客之道有任何其他意见或建议吗？",
       recommendTuludi: "您会向朋友推荐Tuludi吗？",
+      communicationStatement: "我们深知沟通至关重要。",
+      communicationSubtitle:
+        "我们致力于倾听、学习和提升—您的声音确保我们不断提高标准。",
     },
     placeholders: {
       fullName: "请输入您的全名",
