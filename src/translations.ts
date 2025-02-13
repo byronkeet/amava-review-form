@@ -34,6 +34,7 @@ export interface Translation {
     staffRating: string;
     staffStandout: string;
     staffStandoutSubtitle: string;
+    hospitalityComments: string;
   };
   placeholders: {
     fullName: string;
@@ -46,6 +47,7 @@ export interface Translation {
     travelAgent: string;
     guide: string;
     wildlifeComments: string;
+    hospitalityComments: string;
   };
   buttons: {
     next: string;
@@ -121,6 +123,8 @@ export const translations: Record<LanguageCode, Translation> = {
       staffRating: "Our Staff",
       staffStandout: "Did anyone in particular standout?",
       staffStandoutSubtitle: "Choose as many as you like",
+      hospitalityComments:
+        "Any further comments or recommendations about our hospitality?",
     },
     placeholders: {
       fullName: "Enter your full name",
@@ -133,6 +137,7 @@ export const translations: Record<LanguageCode, Translation> = {
       birthday: "Select your date of birth",
       guide: "Select your guide",
       wildlifeComments: "Enter your comments here",
+      hospitalityComments: "Enter your comments here",
     },
     buttons: {
       next: "Next",
@@ -195,6 +200,8 @@ export const translations: Record<LanguageCode, Translation> = {
       staffRating: "Nuestro Personal",
       staffStandout: "¿Alguien destacó en particular?",
       staffStandoutSubtitle: "Elige tantos como quieras",
+      hospitalityComments:
+        "¿Algún comentario o recomendación adicional sobre nuestra hospitalidad?",
     },
     placeholders: {
       fullName: "Ingrese su nombre completo",
@@ -207,6 +214,7 @@ export const translations: Record<LanguageCode, Translation> = {
       birthday: "Seleccione su fecha de nacimiento",
       guide: "Selecciona tu guía",
       wildlifeComments: "Ingrese sus comentarios aquí",
+      hospitalityComments: "Ingrese sus comentarios aquí",
     },
     buttons: {
       next: "Siguiente",
@@ -269,6 +277,8 @@ export const translations: Record<LanguageCode, Translation> = {
       staffRating: "Notre Personnel",
       staffStandout: "Quelqu'un s'est-il particulièrement démarqué ?",
       staffStandoutSubtitle: "Choisissez autant que vous le souhaitez",
+      hospitalityComments:
+        "Avez-vous d'autres commentaires ou recommandations concernant notre hospitalité ?",
     },
     placeholders: {
       fullName: "Entrez votre nom complet",
@@ -281,6 +291,7 @@ export const translations: Record<LanguageCode, Translation> = {
       birthday: "Sélectionnez votre date de naissance",
       guide: "Sélectionnez votre guide",
       wildlifeComments: "Entrez vos commentaires ici",
+      hospitalityComments: "Entrez vos commentaires ici",
     },
     buttons: {
       next: "Suivant",
@@ -344,6 +355,8 @@ export const translations: Record<LanguageCode, Translation> = {
       staffRating: "Unser Personal",
       staffStandout: "Ist jemand besonders aufgefallen?",
       staffStandoutSubtitle: "Wählen Sie so viele wie Sie möchten",
+      hospitalityComments:
+        "Haben Sie weitere Kommentare oder Empfehlungen zu unserer Gastfreundschaft?",
     },
     placeholders: {
       fullName: "Geben Sie Ihren vollständigen Namen ein",
@@ -356,6 +369,7 @@ export const translations: Record<LanguageCode, Translation> = {
       birthday: "Wählen Sie Ihr Geburtsdatum",
       guide: "Wählen Sie Ihren Guide",
       wildlifeComments: "Geben Sie hier Ihre Kommentare ein",
+      hospitalityComments: "Geben Sie hier Ihre Kommentare ein",
     },
     buttons: {
       next: "Weiter",
@@ -418,6 +432,8 @@ export const translations: Record<LanguageCode, Translation> = {
       staffRating: "Ons Personeel",
       staffStandout: "Viel iemand in het bijzonder op?",
       staffStandoutSubtitle: "Kies zoveel als je wilt",
+      hospitalityComments:
+        "Heeft u nog andere opmerkingen of aanbevelingen over onze gastvrijheid?",
     },
     placeholders: {
       fullName: "Voer uw volledige naam in",
@@ -430,6 +446,7 @@ export const translations: Record<LanguageCode, Translation> = {
       birthday: "Selecteer uw geboortedatum",
       guide: "Selecteer uw gids",
       wildlifeComments: "Voer hier uw opmerkingen in",
+      hospitalityComments: "Voer hier uw opmerkingen in",
     },
     buttons: {
       next: "Volgende",
@@ -492,6 +509,8 @@ export const translations: Record<LanguageCode, Translation> = {
       staffRating: "Il Nostro Staff",
       staffStandout: "Qualcuno si è distinto in particolare?",
       staffStandoutSubtitle: "Scegli quanti ne vuoi",
+      hospitalityComments:
+        "Hai altri commenti o suggerimenti sulla nostra ospitalità?",
     },
     placeholders: {
       fullName: "Inserisci il tuo nome completo",
@@ -504,6 +523,7 @@ export const translations: Record<LanguageCode, Translation> = {
       birthday: "Seleziona la tua data di nascita",
       guide: "Seleziona la tua guida",
       wildlifeComments: "Inserisci qui i tuoi commenti",
+      hospitalityComments: "Inserisci qui i tuoi commenti",
     },
     buttons: {
       next: "Avanti",
@@ -566,6 +586,8 @@ export const translations: Record<LanguageCode, Translation> = {
       staffRating: "Наш Персонал",
       staffStandout: "Кто-нибудь особенно выделился?",
       staffStandoutSubtitle: "Выберите столько, сколько хотите",
+      hospitalityComments:
+        "Есть ли у вас дополнительные комментарии или рекомендации о нашем гостеприимстве?",
     },
     placeholders: {
       fullName: "Введите ваше полное имя",
@@ -578,6 +600,7 @@ export const translations: Record<LanguageCode, Translation> = {
       birthday: "Выберите дату рождения",
       guide: "Выберите вашего гида",
       wildlifeComments: "Введите ваши комментарии здесь",
+      hospitalityComments: "Введите ваши комментарии здесь",
     },
     buttons: {
       next: "Далее",
@@ -635,6 +658,7 @@ export const translations: Record<LanguageCode, Translation> = {
       staffRating: "我们的员工",
       staffStandout: "有谁特别出色吗？",
       staffStandoutSubtitle: "可以选择多个",
+      hospitalityComments: "对我们的待客之道有任何其他意见或建议吗？",
     },
     placeholders: {
       fullName: "请输入您的全名",
@@ -647,6 +671,7 @@ export const translations: Record<LanguageCode, Translation> = {
       birthday: "选择您的出生日期",
       guide: "选择您的向导",
       wildlifeComments: "在此输入您的评论",
+      hospitalityComments: "在此输入您的评论",
     },
     buttons: {
       next: "下一步",

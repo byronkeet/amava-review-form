@@ -161,6 +161,12 @@ const createQuestions = (lang: LanguageCode): Question[] => [
     options: staffMembers,
   },
   {
+    id: "hospitalityComments",
+    type: "text",
+    question: translations[lang].questions.hospitalityComments,
+    placeholder: translations[lang].placeholders.hospitalityComments,
+  },
+  {
     id: "birthday",
     type: "date",
     question: translations[lang].questions.birthday,
