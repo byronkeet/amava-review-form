@@ -40,13 +40,6 @@ const createQuestions = (lang: LanguageCode): Question[] => [
     isWelcome: true,
   },
   {
-    id: "activities",
-    type: "multiselect",
-    question: translations[lang].questions.activities,
-    subtitle: translations[lang].questions.activitiesSubtitle,
-    options: activities,
-  },
-  {
     id: "fullName",
     type: "text",
     question: translations[lang].questions.fullName,
@@ -101,6 +94,13 @@ const createQuestions = (lang: LanguageCode): Question[] => [
     question: translations[lang].questions.keySightings,
     subtitle: translations[lang].questions.keySightingsSubtitle,
     options: animals,
+  },
+  {
+    id: "activities",
+    type: "multiselect",
+    question: translations[lang].questions.activities,
+    subtitle: translations[lang].questions.activitiesSubtitle,
+    options: activities,
   },
   {
     id: "birthday",
