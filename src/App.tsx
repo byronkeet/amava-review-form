@@ -15,6 +15,8 @@ import tuludiLogo from "/tuludi-logo.jpg";
 import { StatementCard } from "./components/StatementCard";
 import { SliderCard } from "./components/SliderCard";
 
+const guides = ["Amos", "KG", "Tony", "Ness"];
+
 const createQuestions = (lang: LanguageCode): Question[] => [
   {
     id: "welcome",
@@ -59,6 +61,13 @@ const createQuestions = (lang: LanguageCode): Question[] => [
     question: translations[lang].questions.wildlifeExperience,
     min: 0,
     max: 10,
+  },
+  {
+    id: "guide",
+    type: "select",
+    question: translations[lang].questions.guide,
+    placeholder: translations[lang].placeholders.guide,
+    options: guides,
   },
   {
     id: "birthday",

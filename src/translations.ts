@@ -18,6 +18,7 @@ export interface Translation {
     travelAgent: string;
     experienceStatement: string;
     wildlifeExperience: string;
+    guide: string;
   };
   placeholders: {
     fullName: string;
@@ -28,6 +29,7 @@ export interface Translation {
     childrenNames: string;
     birthday: string;
     travelAgent: string;
+    guide: string;
   };
   buttons: {
     next: string;
@@ -85,6 +87,7 @@ export const translations: Record<LanguageCode, Translation> = {
       experienceStatement:
         ", we pride ourselves on giving a world class wildlife experience. Please rate the experience you had.",
       wildlifeExperience: "Overall Wildlife Experience",
+      guide: "Your Guide",
     },
     placeholders: {
       fullName: "Enter your full name",
@@ -95,6 +98,7 @@ export const translations: Record<LanguageCode, Translation> = {
       insurance: "e.g., Provider Name - Policy #12345",
       childrenNames: "Enter children names",
       birthday: "Select your date of birth",
+      guide: "Select your guide",
     },
     buttons: {
       next: "Next",
@@ -138,6 +142,7 @@ export const translations: Record<LanguageCode, Translation> = {
       experienceStatement:
         ", nos enorgullecemos de ofrecer una experiencia de vida silvestre de clase mundial. Por favor, califique la experiencia que tuvo.",
       wildlifeExperience: "Experiencia General con la Vida Silvestre",
+      guide: "Tu Guía",
     },
     placeholders: {
       fullName: "Ingrese su nombre completo",
@@ -148,6 +153,7 @@ export const translations: Record<LanguageCode, Translation> = {
       insurance: "ej., Nombre del Proveedor - Póliza #12345",
       childrenNames: "Ingrese los nombres de los niños",
       birthday: "Seleccione su fecha de nacimiento",
+      guide: "Selecciona tu guía",
     },
     buttons: {
       next: "Siguiente",
@@ -190,6 +196,7 @@ export const translations: Record<LanguageCode, Translation> = {
       experienceStatement:
         ", nous sommes fiers d'offrir une expérience de la faune de classe mondiale. Veuillez évaluer l'expérience que vous avez eue.",
       wildlifeExperience: "Expérience Globale de la Faune",
+      guide: "Votre Guide",
     },
     placeholders: {
       fullName: "Entrez votre nom complet",
@@ -200,6 +207,7 @@ export const translations: Record<LanguageCode, Translation> = {
       insurance: "ex., Nom de l'assureur - Police #12345",
       childrenNames: "Entrez les noms des enfants",
       birthday: "Sélectionnez votre date de naissance",
+      guide: "Sélectionnez votre guide",
     },
     buttons: {
       next: "Suivant",
@@ -243,6 +251,7 @@ export const translations: Record<LanguageCode, Translation> = {
       experienceStatement:
         ", wir sind stolz darauf, ein erstklassiges Wildtier-Erlebnis zu bieten. Bitte bewerten Sie Ihre Erfahrung.",
       wildlifeExperience: "Gesamte Wildlife-Erfahrung",
+      guide: "Ihr Guide",
     },
     placeholders: {
       fullName: "Geben Sie Ihren vollständigen Namen ein",
@@ -253,6 +262,7 @@ export const translations: Record<LanguageCode, Translation> = {
       insurance: "z.B., Versicherungsname - Police #12345",
       childrenNames: "Geben Sie die Namen der Kinder ein",
       birthday: "Wählen Sie Ihr Geburtsdatum",
+      guide: "Wählen Sie Ihren Guide",
     },
     buttons: {
       next: "Weiter",
@@ -295,6 +305,7 @@ export const translations: Record<LanguageCode, Translation> = {
       experienceStatement:
         ", we zijn er trots op een wereldklasse wildlife-ervaring te bieden. Beoordeel alstublieft uw ervaring.",
       wildlifeExperience: "Algemene Wildlife Ervaring",
+      guide: "Uw Gids",
     },
     placeholders: {
       fullName: "Voer uw volledige naam in",
@@ -305,6 +316,7 @@ export const translations: Record<LanguageCode, Translation> = {
       insurance: "bijv., Verzekeraar - Polis #12345",
       childrenNames: "Voer de namen van de kinderen in",
       birthday: "Selecteer uw geboortedatum",
+      guide: "Selecteer uw gids",
     },
     buttons: {
       next: "Volgende",
@@ -347,6 +359,7 @@ export const translations: Record<LanguageCode, Translation> = {
       experienceStatement:
         ", siamo orgogliosi di offrire un'esperienza naturalistica di livello mondiale. Per favore valuta l'esperienza che hai avuto.",
       wildlifeExperience: "Esperienza Complessiva della Fauna Selvatica",
+      guide: "La Tua Guida",
     },
     placeholders: {
       fullName: "Inserisci il tuo nome completo",
@@ -357,6 +370,7 @@ export const translations: Record<LanguageCode, Translation> = {
       insurance: "es., Nome Assicuratore - Polizza #12345",
       childrenNames: "Inserisci i nomi dei bambini",
       birthday: "Seleziona la tua data di nascita",
+      guide: "Seleziona la tua guida",
     },
     buttons: {
       next: "Avanti",
@@ -399,6 +413,7 @@ export const translations: Record<LanguageCode, Translation> = {
       experienceStatement:
         ", мы гордимся тем, что предоставляем первоклассный опыт наблюдения за дикой природой. Пожалуйста, оцените ваш опыт.",
       wildlifeExperience: "Общее Впечатление от Дикой Природы",
+      guide: "Ваш Гид",
     },
     placeholders: {
       fullName: "Введите ваше полное имя",
@@ -409,6 +424,7 @@ export const translations: Record<LanguageCode, Translation> = {
       insurance: "напр., Название страховщика - Полис #12345",
       childrenNames: "Введите имена детей",
       birthday: "Выберите дату рождения",
+      guide: "Выберите вашего гида",
     },
     buttons: {
       next: "Далее",
@@ -450,6 +466,7 @@ export const translations: Record<LanguageCode, Translation> = {
       experienceStatement:
         "，我们以提供世界级的野生动物体验为荣。请为您的体验打分。",
       wildlifeExperience: "整体野生动物体验",
+      guide: "您的向导",
     },
     placeholders: {
       fullName: "请输入您的全名",
@@ -460,6 +477,7 @@ export const translations: Record<LanguageCode, Translation> = {
       insurance: "例如：保险公司名称 - 保单 #12345",
       childrenNames: "输入儿童姓名",
       birthday: "选择您的出生日期",
+      guide: "选择您的向导",
     },
     buttons: {
       next: "下一步",
