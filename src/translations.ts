@@ -15,6 +15,7 @@ export interface Translation {
     childrenNames: string;
     termsAccepted: string;
     signature: string;
+    travelAgent: string;
   };
   placeholders: {
     fullName: string;
@@ -24,6 +25,7 @@ export interface Translation {
     insurance: string;
     childrenNames: string;
     birthday: string;
+    travelAgent: string;
   };
   buttons: {
     next: string;
@@ -69,6 +71,7 @@ export const translations: Record<LanguageCode, Translation> = {
       fullName: 'Full Name',
       email: 'Email Address',
       nationality: 'Nationality',
+      travelAgent: 'Name of Travel Agent',
       birthday: 'What is your date of birth?',
       idNumber: 'What is your ID/Passport Number?',
       insurance: 'What is your Insurance Provider & Policy Number?',
@@ -81,6 +84,7 @@ export const translations: Record<LanguageCode, Translation> = {
       fullName: 'Enter your full name',
       email: 'name@example.com',
       nationality: 'Select your nationality',
+      travelAgent: 'Enter your travel agent\'s name',
       idNumber: 'Enter your ID or passport number',
       insurance: 'e.g., Provider Name - Policy #12345',
       childrenNames: 'Enter children names',
@@ -115,6 +119,7 @@ export const translations: Record<LanguageCode, Translation> = {
       fullName: 'Nombre Completo',
       email: 'Correo Electrónico',
       nationality: 'Nacionalidad',
+      travelAgent: 'Nombre del Agente de Viajes',
       birthday: '¿Cuál es su fecha de nacimiento?',
       idNumber: '¿Cuál es su número de identificación/pasaporte?',
       insurance: '¿Cuál es su proveedor de seguros y número de póliza?',
@@ -127,6 +132,7 @@ export const translations: Record<LanguageCode, Translation> = {
       fullName: 'Ingrese su nombre completo',
       email: 'nombre@ejemplo.com',
       nationality: 'Seleccione su nacionalidad',
+      travelAgent: 'Ingrese el nombre de su agente de viajes',
       idNumber: 'Ingrese su número de identificación o pasaporte',
       insurance: 'ej., Nombre del Proveedor - Póliza #12345',
       childrenNames: 'Ingrese los nombres de los niños',
@@ -161,6 +167,7 @@ export const translations: Record<LanguageCode, Translation> = {
       fullName: 'Nom Complet',
       email: 'Adresse Email',
       nationality: 'Nationalité',
+      travelAgent: 'Nom de l\'Agent de Voyage',
       birthday: 'Quelle est votre date de naissance ?',
       idNumber: 'Quel est votre numéro de carte d\'identité/passeport ?',
       insurance: 'Quel est votre assureur et numéro de police ?',
@@ -173,6 +180,7 @@ export const translations: Record<LanguageCode, Translation> = {
       fullName: 'Entrez votre nom complet',
       email: 'nom@exemple.com',
       nationality: 'Sélectionnez votre nationalité',
+      travelAgent: 'Entrez le nom de votre agent de voyage',
       idNumber: 'Entrez votre numéro de carte d\'identité ou de passeport',
       insurance: 'ex., Nom de l\'assureur - Police #12345',
       childrenNames: 'Entrez les noms des enfants',
@@ -207,6 +215,7 @@ export const translations: Record<LanguageCode, Translation> = {
       fullName: 'Vollständiger Name',
       email: 'E-Mail-Adresse',
       nationality: 'Nationalität',
+      travelAgent: 'Name des Reiseberaters',
       birthday: 'Was ist Ihr Geburtsdatum?',
       idNumber: 'Wie lautet Ihre Ausweis-/Passnummer?',
       insurance: 'Wie lauten Ihr Versicherungsanbieter und Ihre Policennummer?',
@@ -219,6 +228,7 @@ export const translations: Record<LanguageCode, Translation> = {
       fullName: 'Geben Sie Ihren vollständigen Namen ein',
       email: 'name@beispiel.com',
       nationality: 'Wählen Sie Ihre Nationalität',
+      travelAgent: 'Geben Sie den Namen Ihres Reiseberaters ein',
       idNumber: 'Geben Sie Ihre Ausweis- oder Passnummer ein',
       insurance: 'z.B., Versicherungsname - Police #12345',
       childrenNames: 'Geben Sie die Namen der Kinder ein',
@@ -253,6 +263,7 @@ export const translations: Record<LanguageCode, Translation> = {
       fullName: 'Volledige Naam',
       email: 'E-mailadres',
       nationality: 'Nationaliteit',
+      travelAgent: 'Naam Reisagent',
       birthday: 'Wat is uw geboortedatum?',
       idNumber: 'Wat is uw ID/paspoortnummer?',
       insurance: 'Wat is uw verzekeringsmaatschappij en polisnummer?',
@@ -265,6 +276,7 @@ export const translations: Record<LanguageCode, Translation> = {
       fullName: 'Voer uw volledige naam in',
       email: 'naam@voorbeeld.com',
       nationality: 'Selecteer uw nationaliteit',
+      travelAgent: 'Voer de naam van uw reisagent in',
       idNumber: 'Voer uw ID- of paspoortnummer in',
       insurance: 'bijv., Verzekeraar - Polis #12345',
       childrenNames: 'Voer de namen van de kinderen in',
@@ -299,6 +311,7 @@ export const translations: Record<LanguageCode, Translation> = {
       fullName: 'Nome Completo',
       email: 'Indirizzo Email',
       nationality: 'Nazionalità',
+      travelAgent: 'Nome dell\'Agente di Viaggio',
       birthday: 'Qual è la tua data di nascita?',
       idNumber: 'Qual è il tuo numero di carta d\'identità/passaporto?',
       insurance: 'Qual è il tuo assicuratore e numero di polizza?',
@@ -311,6 +324,7 @@ export const translations: Record<LanguageCode, Translation> = {
       fullName: 'Inserisci il tuo nome completo',
       email: 'nome@esempio.com',
       nationality: 'Seleziona la tua nazionalità',
+      travelAgent: 'Inserisci il nome del tuo agente di viaggio',
       idNumber: 'Inserisci il tuo numero di carta d\'identità o passaporto',
       insurance: 'es., Nome Assicuratore - Polizza #12345',
       childrenNames: 'Inserisci i nomi dei bambini',
@@ -345,6 +359,7 @@ export const translations: Record<LanguageCode, Translation> = {
       fullName: 'Полное Имя',
       email: 'Электронная Почта',
       nationality: 'Гражданство',
+      travelAgent: 'Имя Турагента',
       birthday: 'Какая у вас дата рождения?',
       idNumber: 'Какой у вас номер паспорта/удостоверения личности?',
       insurance: 'Кто ваш страховщик и номер полиса?',
@@ -357,6 +372,7 @@ export const translations: Record<LanguageCode, Translation> = {
       fullName: 'Введите ваше полное имя',
       email: 'имя@пример.com',
       nationality: 'Выберите ваше гражданство',
+      travelAgent: 'Введите имя вашего турагента',
       idNumber: 'Введите номер паспорта или удостоверения личности',
       insurance: 'напр., Название страховщика - Полис #12345',
       childrenNames: 'Введите имена детей',
@@ -391,6 +407,7 @@ export const translations: Record<LanguageCode, Translation> = {
       fullName: '全名',
       email: '电子邮件地址',
       nationality: '国籍',
+      travelAgent: '旅行社代理人姓名',
       birthday: '您的出生日期是什么？',
       idNumber: '您的身份证/护照号码是什么？',
       insurance: '您的保险公司和保单号码是什么？',
@@ -403,6 +420,7 @@ export const translations: Record<LanguageCode, Translation> = {
       fullName: '请输入您的全名',
       email: 'name@example.com',
       nationality: '选择您的国籍',
+      travelAgent: '请输入您的旅行社代理人姓名',
       idNumber: '输入您的身份证或护照号码',
       insurance: '例如：保险公司名称 - 保单 #12345',
       childrenNames: '输入儿童姓名',

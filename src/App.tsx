@@ -37,7 +37,14 @@ const createQuestions = (lang: LanguageCode): Question[] => [
     id: 'nationality',
     type: 'select',
     question: translations[lang].questions.nationality,
+    placeholder: translations[lang].placeholders.nationality,
     options: countries,
+  },
+  {
+    id: 'travelAgent',
+    type: 'text',
+    question: translations[lang].questions.travelAgent,
+    placeholder: translations[lang].placeholders.travelAgent,
   },
   {
     id: 'birthday',
