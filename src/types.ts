@@ -9,7 +9,8 @@ export interface Question {
     | "checkbox"
     | "signature"
     | "language"
-    | "slider";
+    | "slider"
+    | "rating";
   question: string | JSX.Element;
   placeholder?: string;
   options?: string[];

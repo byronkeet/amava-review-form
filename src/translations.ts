@@ -19,6 +19,7 @@ export interface Translation {
     experienceStatement: string;
     wildlifeExperience: string;
     guide: string;
+    guideRating: string;
   };
   placeholders: {
     fullName: string;
@@ -88,6 +89,7 @@ export const translations: Record<LanguageCode, Translation> = {
         ", we pride ourselves on giving a world class wildlife experience. Please rate the experience you had.",
       wildlifeExperience: "Overall Wildlife Experience",
       guide: "Your Guide",
+      guideRating: "Rate Your Guide",
     },
     placeholders: {
       fullName: "Enter your full name",
@@ -143,6 +145,7 @@ export const translations: Record<LanguageCode, Translation> = {
         ", nos enorgullecemos de ofrecer una experiencia de vida silvestre de clase mundial. Por favor, califique la experiencia que tuvo.",
       wildlifeExperience: "Experiencia General con la Vida Silvestre",
       guide: "Tu Guía",
+      guideRating: "Califica a Tu Guía",
     },
     placeholders: {
       fullName: "Ingrese su nombre completo",
@@ -197,6 +200,7 @@ export const translations: Record<LanguageCode, Translation> = {
         ", nous sommes fiers d'offrir une expérience de la faune de classe mondiale. Veuillez évaluer l'expérience que vous avez eue.",
       wildlifeExperience: "Expérience Globale de la Faune",
       guide: "Votre Guide",
+      guideRating: "Évaluez Votre Guide",
     },
     placeholders: {
       fullName: "Entrez votre nom complet",
@@ -252,6 +256,7 @@ export const translations: Record<LanguageCode, Translation> = {
         ", wir sind stolz darauf, ein erstklassiges Wildtier-Erlebnis zu bieten. Bitte bewerten Sie Ihre Erfahrung.",
       wildlifeExperience: "Gesamte Wildlife-Erfahrung",
       guide: "Ihr Guide",
+      guideRating: "Bewerten Sie Ihren Guide",
     },
     placeholders: {
       fullName: "Geben Sie Ihren vollständigen Namen ein",
@@ -306,6 +311,7 @@ export const translations: Record<LanguageCode, Translation> = {
         ", we zijn er trots op een wereldklasse wildlife-ervaring te bieden. Beoordeel alstublieft uw ervaring.",
       wildlifeExperience: "Algemene Wildlife Ervaring",
       guide: "Uw Gids",
+      guideRating: "Beoordeel Uw Gids",
     },
     placeholders: {
       fullName: "Voer uw volledige naam in",
@@ -360,6 +366,7 @@ export const translations: Record<LanguageCode, Translation> = {
         ", siamo orgogliosi di offrire un'esperienza naturalistica di livello mondiale. Per favore valuta l'esperienza che hai avuto.",
       wildlifeExperience: "Esperienza Complessiva della Fauna Selvatica",
       guide: "La Tua Guida",
+      guideRating: "Valuta La Tua Guida",
     },
     placeholders: {
       fullName: "Inserisci il tuo nome completo",
@@ -414,6 +421,7 @@ export const translations: Record<LanguageCode, Translation> = {
         ", мы гордимся тем, что предоставляем первоклассный опыт наблюдения за дикой природой. Пожалуйста, оцените ваш опыт.",
       wildlifeExperience: "Общее Впечатление от Дикой Природы",
       guide: "Ваш Гид",
+      guideRating: "Оцените Вашего Гида",
     },
     placeholders: {
       fullName: "Введите ваше полное имя",
@@ -467,6 +475,7 @@ export const translations: Record<LanguageCode, Translation> = {
         "，我们以提供世界级的野生动物体验为荣。请为您的体验打分。",
       wildlifeExperience: "整体野生动物体验",
       guide: "您的向导",
+      guideRating: "评价您的向导",
     },
     placeholders: {
       fullName: "请输入您的全名",

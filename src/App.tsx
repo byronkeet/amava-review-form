@@ -14,6 +14,7 @@ import naturalSelectionLogo from "/natural-selection-logo.png";
 import tuludiLogo from "/tuludi-logo.jpg";
 import { StatementCard } from "./components/StatementCard";
 import { SliderCard } from "./components/SliderCard";
+import { RatingCard } from "./components/RatingCard";
 
 const guides = ["Amos", "KG", "Tony", "Ness"];
 
@@ -68,6 +69,11 @@ const createQuestions = (lang: LanguageCode): Question[] => [
     question: translations[lang].questions.guide,
     placeholder: translations[lang].placeholders.guide,
     options: guides,
+  },
+  {
+    id: "guideRating",
+    type: "rating",
+    question: translations[lang].questions.guideRating,
   },
   {
     id: "birthday",
@@ -369,6 +375,26 @@ function App() {
           }
           min={question.min || 0}
           max={question.max || 10}
+          onChange={(value) => {
+            setFormState((prev) => ({
+              ...prev,
+              [question.id]: value.toString(),
+            }));
+          }}
+          currentIndex={currentQuestion}
+          totalQuestions={questions.length}
+          onBack={handleBack}
+          onNext={() => handleNext(formState[question.id])}
+          backText={translations[language].buttons.back}
+          nextText={translations[language].buttons.next}
+        />
+      );
+    }
+    if (question.type === "rating") {
+      return (
+        <RatingCard
+          question={question.question}
+          currentValue={Number(formState[question.id])}
           onChange={(value) => {
             setFormState((prev) => ({
               ...prev,
