@@ -43,7 +43,7 @@ export const RatingCard: React.FC<RatingCardProps> = ({
           <h2 className="text-2xl sm:text-4xl font-bold text-gray-900">
             {question}
           </h2>
-          <div className="flex justify-center">
+          <div className="flex justify-center pt-3">
             <div
               className="inline-flex gap-1 sm:gap-2 bg-transparent px-2 py-1"
               onMouseLeave={() => setHoverValue(null)}
