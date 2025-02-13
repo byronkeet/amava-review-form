@@ -16,6 +16,7 @@ import { StatementCard } from "./components/StatementCard";
 import { SliderCard } from "./components/SliderCard";
 import { RatingCard } from "./components/RatingCard";
 import { MultiSelectCard } from "./components/MultiSelectCard";
+import { MultiSelectDropdownCard } from "./components/MultiSelectDropdownCard";
 
 const guides = ["Amos", "KG", "Tony", "Ness"];
 
@@ -29,6 +30,19 @@ const activities = [
   "Fishing",
   "Ranger's Experience",
   "Village Tour",
+];
+
+const staffMembers = [
+  "Ava",
+  "Ethan",
+  "Isabella",
+  "Jackson",
+  "Liam",
+  "Lucas",
+  "Mason",
+  "Mia",
+  "Olivia",
+  "Sophia",
 ];
 
 const createQuestions = (lang: LanguageCode): Question[] => [
@@ -138,6 +152,13 @@ const createQuestions = (lang: LanguageCode): Question[] => [
     id: "staffRating",
     type: "rating",
     question: translations[lang].questions.staffRating,
+  },
+  {
+    id: "staffStandout",
+    type: "multiselectdropdown",
+    question: translations[lang].questions.staffStandout,
+    subtitle: translations[lang].questions.staffStandoutSubtitle,
+    options: staffMembers,
   },
   {
     id: "birthday",
@@ -479,6 +500,32 @@ function App() {
       return (
         <MultiSelectCard
           question={question.question as string}
+          subtitle={question.subtitle}
+          options={question.options || []}
+          selectedValues={
+            formState[question.id]
+              ? JSON.parse(formState[question.id] as string)
+              : []
+          }
+          onChange={(values) => {
+            setFormState((prev) => ({
+              ...prev,
+              [question.id]: JSON.stringify(values),
+            }));
+          }}
+          currentIndex={currentQuestion}
+          totalQuestions={questions.length}
+          onBack={handleBack}
+          onNext={() => handleNext(formState[question.id])}
+          backText={translations[language].buttons.back}
+          nextText={translations[language].buttons.next}
+        />
+      );
+    }
+    if (question.type === "multiselectdropdown") {
+      return (
+        <MultiSelectDropdownCard
+          question={question.question}
           subtitle={question.subtitle}
           options={question.options || []}
           selectedValues={

@@ -32,6 +32,8 @@ export interface Translation {
     foodRating: string;
     housekeepingRating: string;
     staffRating: string;
+    staffStandout: string;
+    staffStandoutSubtitle: string;
   };
   placeholders: {
     fullName: string;
@@ -117,6 +119,8 @@ export const translations: Record<LanguageCode, Translation> = {
       foodRating: "The Food",
       housekeepingRating: "Housekeeping",
       staffRating: "Our Staff",
+      staffStandout: "Did anyone in particular standout?",
+      staffStandoutSubtitle: "Choose as many as you like",
     },
     placeholders: {
       fullName: "Enter your full name",
@@ -189,6 +193,8 @@ export const translations: Record<LanguageCode, Translation> = {
       foodRating: "La Comida",
       housekeepingRating: "Limpieza",
       staffRating: "Nuestro Personal",
+      staffStandout: "¿Alguien destacó en particular?",
+      staffStandoutSubtitle: "Elige tantos como quieras",
     },
     placeholders: {
       fullName: "Ingrese su nombre completo",
@@ -261,6 +267,8 @@ export const translations: Record<LanguageCode, Translation> = {
       foodRating: "La Nourriture",
       housekeepingRating: "Service de Chambre",
       staffRating: "Notre Personnel",
+      staffStandout: "Quelqu'un s'est-il particulièrement démarqué ?",
+      staffStandoutSubtitle: "Choisissez autant que vous le souhaitez",
     },
     placeholders: {
       fullName: "Entrez votre nom complet",
@@ -334,6 +342,8 @@ export const translations: Record<LanguageCode, Translation> = {
       foodRating: "Das Essen",
       housekeepingRating: "Zimmerservice",
       staffRating: "Unser Personal",
+      staffStandout: "Ist jemand besonders aufgefallen?",
+      staffStandoutSubtitle: "Wählen Sie so viele wie Sie möchten",
     },
     placeholders: {
       fullName: "Geben Sie Ihren vollständigen Namen ein",
@@ -406,6 +416,8 @@ export const translations: Record<LanguageCode, Translation> = {
       foodRating: "Het Eten",
       housekeepingRating: "Huishouding",
       staffRating: "Ons Personeel",
+      staffStandout: "Viel iemand in het bijzonder op?",
+      staffStandoutSubtitle: "Kies zoveel als je wilt",
     },
     placeholders: {
       fullName: "Voer uw volledige naam in",
@@ -478,6 +490,8 @@ export const translations: Record<LanguageCode, Translation> = {
       foodRating: "Il Cibo",
       housekeepingRating: "Pulizie",
       staffRating: "Il Nostro Staff",
+      staffStandout: "Qualcuno si è distinto in particolare?",
+      staffStandoutSubtitle: "Scegli quanti ne vuoi",
     },
     placeholders: {
       fullName: "Inserisci il tuo nome completo",
@@ -550,6 +564,8 @@ export const translations: Record<LanguageCode, Translation> = {
       foodRating: "Питание",
       housekeepingRating: "Обслуживание Номеров",
       staffRating: "Наш Персонал",
+      staffStandout: "Кто-нибудь особенно выделился?",
+      staffStandoutSubtitle: "Выберите столько, сколько хотите",
     },
     placeholders: {
       fullName: "Введите ваше полное имя",
@@ -617,6 +633,8 @@ export const translations: Record<LanguageCode, Translation> = {
       foodRating: "餐饮",
       housekeepingRating: "客房服务",
       staffRating: "我们的员工",
+      staffStandout: "有谁特别出色吗？",
+      staffStandoutSubtitle: "可以选择多个",
     },
     placeholders: {
       fullName: "请输入您的全名",
