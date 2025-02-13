@@ -68,7 +68,7 @@ export const translations: Record<LanguageCode, Translation> = {
     questions: {
       fullName: 'Full Name',
       email: 'Email Address',
-      nationality: 'What is your nationality?',
+      nationality: 'Nationality',
       birthday: 'What is your date of birth?',
       idNumber: 'What is your ID/Passport Number?',
       insurance: 'What is your Insurance Provider & Policy Number?',
@@ -114,7 +114,7 @@ export const translations: Record<LanguageCode, Translation> = {
     questions: {
       fullName: 'Nombre Completo',
       email: 'Correo Electrónico',
-      nationality: '¿Cuál es su nacionalidad?',
+      nationality: 'Nacionalidad',
       birthday: '¿Cuál es su fecha de nacimiento?',
       idNumber: '¿Cuál es su número de identificación/pasaporte?',
       insurance: '¿Cuál es su proveedor de seguros y número de póliza?',
@@ -160,7 +160,7 @@ export const translations: Record<LanguageCode, Translation> = {
     questions: {
       fullName: 'Nom Complet',
       email: 'Adresse Email',
-      nationality: 'Quelle est votre nationalité ?',
+      nationality: 'Nationalité',
       birthday: 'Quelle est votre date de naissance ?',
       idNumber: 'Quel est votre numéro de carte d\'identité/passeport ?',
       insurance: 'Quel est votre assureur et numéro de police ?',
@@ -206,7 +206,7 @@ export const translations: Record<LanguageCode, Translation> = {
     questions: {
       fullName: 'Vollständiger Name',
       email: 'E-Mail-Adresse',
-      nationality: 'Was ist Ihre Nationalität?',
+      nationality: 'Nationalität',
       birthday: 'Was ist Ihr Geburtsdatum?',
       idNumber: 'Wie lautet Ihre Ausweis-/Passnummer?',
       insurance: 'Wie lauten Ihr Versicherungsanbieter und Ihre Policennummer?',
@@ -252,7 +252,7 @@ export const translations: Record<LanguageCode, Translation> = {
     questions: {
       fullName: 'Volledige Naam',
       email: 'E-mailadres',
-      nationality: 'Wat is uw nationaliteit?',
+      nationality: 'Nationaliteit',
       birthday: 'Wat is uw geboortedatum?',
       idNumber: 'Wat is uw ID/paspoortnummer?',
       insurance: 'Wat is uw verzekeringsmaatschappij en polisnummer?',
@@ -298,7 +298,7 @@ export const translations: Record<LanguageCode, Translation> = {
     questions: {
       fullName: 'Nome Completo',
       email: 'Indirizzo Email',
-      nationality: 'Qual è la tua nazionalità?',
+      nationality: 'Nazionalità',
       birthday: 'Qual è la tua data di nascita?',
       idNumber: 'Qual è il tuo numero di carta d\'identità/passaporto?',
       insurance: 'Qual è il tuo assicuratore e numero di polizza?',
@@ -344,7 +344,7 @@ export const translations: Record<LanguageCode, Translation> = {
     questions: {
       fullName: 'Полное Имя',
       email: 'Электронная Почта',
-      nationality: 'Какое у вас гражданство?',
+      nationality: 'Гражданство',
       birthday: 'Какая у вас дата рождения?',
       idNumber: 'Какой у вас номер паспорта/удостоверения личности?',
       insurance: 'Кто ваш страховщик и номер полиса?',
@@ -390,7 +390,7 @@ export const translations: Record<LanguageCode, Translation> = {
     questions: {
       fullName: '全名',
       email: '电子邮件地址',
-      nationality: '您的国籍是什么？',
+      nationality: '国籍',
       birthday: '您的出生日期是什么？',
       idNumber: '您的身份证/护照号码是什么？',
       insurance: '您的保险公司和保单号码是什么？',
