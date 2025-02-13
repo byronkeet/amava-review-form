@@ -115,6 +115,31 @@ const createQuestions = (lang: LanguageCode): Question[] => [
     subtitle: translations[lang].questions.hospitalitySubtitle,
   },
   {
+    id: "accommodationRating",
+    type: "rating",
+    question: translations[lang].questions.accommodationRating,
+  },
+  {
+    id: "facilitiesRating",
+    type: "rating",
+    question: translations[lang].questions.facilitiesRating,
+  },
+  {
+    id: "foodRating",
+    type: "rating",
+    question: translations[lang].questions.foodRating,
+  },
+  {
+    id: "housekeepingRating",
+    type: "rating",
+    question: translations[lang].questions.housekeepingRating,
+  },
+  {
+    id: "staffRating",
+    type: "rating",
+    question: translations[lang].questions.staffRating,
+  },
+  {
     id: "birthday",
     type: "date",
     question: translations[lang].questions.birthday,

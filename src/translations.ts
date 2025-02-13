@@ -27,6 +27,11 @@ export interface Translation {
     wildlifeComments: string;
     hospitalityStatement: string;
     hospitalitySubtitle: string;
+    accommodationRating: string;
+    facilitiesRating: string;
+    foodRating: string;
+    housekeepingRating: string;
+    staffRating: string;
   };
   placeholders: {
     fullName: string;
@@ -107,6 +112,11 @@ export const translations: Record<LanguageCode, Translation> = {
       hospitalityStatement: ", please rate our hospitality.",
       hospitalitySubtitle:
         "Your valued opinion allows us to constantly improve our service and our camp.",
+      accommodationRating: "Your Accommodation",
+      facilitiesRating: "The Camp Facilities",
+      foodRating: "The Food",
+      housekeepingRating: "Housekeeping",
+      staffRating: "Our Staff",
     },
     placeholders: {
       fullName: "Enter your full name",
@@ -174,6 +184,11 @@ export const translations: Record<LanguageCode, Translation> = {
       hospitalityStatement: ", por favor califica nuestra hospitalidad.",
       hospitalitySubtitle:
         "Tu valiosa opinión nos permite mejorar constantemente nuestro servicio y nuestro campamento.",
+      accommodationRating: "Tu Alojamiento",
+      facilitiesRating: "Las Instalaciones del Campamento",
+      foodRating: "La Comida",
+      housekeepingRating: "Limpieza",
+      staffRating: "Nuestro Personal",
     },
     placeholders: {
       fullName: "Ingrese su nombre completo",
@@ -241,6 +256,11 @@ export const translations: Record<LanguageCode, Translation> = {
       hospitalityStatement: ", merci d'évaluer notre hospitalité.",
       hospitalitySubtitle:
         "Votre précieux avis nous permet d'améliorer constamment notre service et notre camp.",
+      accommodationRating: "Votre Hébergement",
+      facilitiesRating: "Les Installations du Camp",
+      foodRating: "La Nourriture",
+      housekeepingRating: "Service de Chambre",
+      staffRating: "Notre Personnel",
     },
     placeholders: {
       fullName: "Entrez votre nom complet",
@@ -309,6 +329,11 @@ export const translations: Record<LanguageCode, Translation> = {
       hospitalityStatement: ", bitte bewerten Sie unsere Gastfreundschaft.",
       hospitalitySubtitle:
         "Ihre wertvolle Meinung ermöglicht es uns, unseren Service und unser Camp stetig zu verbessern.",
+      accommodationRating: "Ihre Unterkunft",
+      facilitiesRating: "Die Camp-Einrichtungen",
+      foodRating: "Das Essen",
+      housekeepingRating: "Zimmerservice",
+      staffRating: "Unser Personal",
     },
     placeholders: {
       fullName: "Geben Sie Ihren vollständigen Namen ein",
@@ -376,6 +401,11 @@ export const translations: Record<LanguageCode, Translation> = {
       hospitalityStatement: ", beoordeel alstublieft onze gastvrijheid.",
       hospitalitySubtitle:
         "Uw waardevolle mening stelt ons in staat onze service en ons kamp voortdurend te verbeteren.",
+      accommodationRating: "Uw Accommodatie",
+      facilitiesRating: "De Kampfaciliteiten",
+      foodRating: "Het Eten",
+      housekeepingRating: "Huishouding",
+      staffRating: "Ons Personeel",
     },
     placeholders: {
       fullName: "Voer uw volledige naam in",
@@ -443,6 +473,11 @@ export const translations: Record<LanguageCode, Translation> = {
       hospitalityStatement: ", ti preghiamo di valutare la nostra ospitalità.",
       hospitalitySubtitle:
         "La tua preziosa opinione ci permette di migliorare costantemente il nostro servizio e il nostro campo.",
+      accommodationRating: "Il Tuo Alloggio",
+      facilitiesRating: "Le Strutture del Campo",
+      foodRating: "Il Cibo",
+      housekeepingRating: "Pulizie",
+      staffRating: "Il Nostro Staff",
     },
     placeholders: {
       fullName: "Inserisci il tuo nome completo",
@@ -510,6 +545,11 @@ export const translations: Record<LanguageCode, Translation> = {
       hospitalityStatement: ", пожалуйста, оцените наше гостеприимство.",
       hospitalitySubtitle:
         "Ваше ценное мнение позволяет нам постоянно улучшать наш сервис и наш лагерь.",
+      accommodationRating: "Ваше Размещение",
+      facilitiesRating: "Удобства Лагеря",
+      foodRating: "Питание",
+      housekeepingRating: "Обслуживание Номеров",
+      staffRating: "Наш Персонал",
     },
     placeholders: {
       fullName: "Введите ваше полное имя",
@@ -572,6 +612,11 @@ export const translations: Record<LanguageCode, Translation> = {
       wildlifeComments: "对我们的野生动物体验有任何其他意见或建议吗？",
       hospitalityStatement: "，请评价我们的待客之道。",
       hospitalitySubtitle: "您的宝贵意见使我们能够不断改进我们的服务和营地。",
+      accommodationRating: "您的住宿",
+      facilitiesRating: "营地设施",
+      foodRating: "餐饮",
+      housekeepingRating: "客房服务",
+      staffRating: "我们的员工",
     },
     placeholders: {
       fullName: "请输入您的全名",
