@@ -16,6 +16,7 @@ export interface Translation {
     termsAccepted: string;
     signature: string;
     travelAgent: string;
+    experienceStatement: string;
   };
   placeholders: {
     fullName: string;
@@ -79,6 +80,7 @@ export const translations: Record<LanguageCode, Translation> = {
       childrenNames: 'What are the names of the children traveling with you?',
       termsAccepted: 'I accept the terms & conditions of the Indemnity, Waiver & Disclaimer Form.',
       signature: 'Please sign below to complete the form',
+      experienceStatement: ', we pride ourselves on giving a world class wildlife experience. Please rate the experience you had.',
     },
     placeholders: {
       fullName: 'Enter your full name',
@@ -127,6 +129,7 @@ export const translations: Record<LanguageCode, Translation> = {
       childrenNames: '¿Cuáles son los nombres de los niños que viajan con usted?',
       termsAccepted: 'Acepto los términos y condiciones del Formulario de Indemnización, Renuncia y Descargo.',
       signature: 'Por favor firme abajo para completar el formulario',
+      experienceStatement: ', nos enorgullecemos de ofrecer una experiencia de vida silvestre de clase mundial. Por favor, califique la experiencia que tuvo.',
     },
     placeholders: {
       fullName: 'Ingrese su nombre completo',
@@ -175,6 +178,7 @@ export const translations: Record<LanguageCode, Translation> = {
       childrenNames: 'Quels sont les noms des enfants qui voyagent avec vous ?',
       termsAccepted: 'J\'accepte les termes et conditions du formulaire d\'indemnisation, de renonciation et de décharge.',
       signature: 'Veuillez signer ci-dessous pour compléter le formulaire',
+      experienceStatement: ', nous sommes fiers d\'offrir une expérience de la faune de classe mondiale. Veuillez évaluer l\'expérience que vous avez eue.',
     },
     placeholders: {
       fullName: 'Entrez votre nom complet',
@@ -223,6 +227,7 @@ export const translations: Record<LanguageCode, Translation> = {
       childrenNames: 'Wie heißen die Kinder, die mit Ihnen reisen?',
       termsAccepted: 'Ich akzeptiere die Bedingungen des Entschädigungs-, Verzichts- und Haftungsausschlussformulars.',
       signature: 'Bitte unterschreiben Sie unten, um das Formular abzuschließen',
+      experienceStatement: ', wir sind stolz darauf, ein erstklassiges Wildtier-Erlebnis zu bieten. Bitte bewerten Sie Ihre Erfahrung.',
     },
     placeholders: {
       fullName: 'Geben Sie Ihren vollständigen Namen ein',
@@ -271,6 +276,7 @@ export const translations: Record<LanguageCode, Translation> = {
       childrenNames: 'Wat zijn de namen van de kinderen die met u meereizen?',
       termsAccepted: 'Ik accepteer de voorwaarden van het vrijwarings-, afstands- en disclaimerformulier.',
       signature: 'Teken hieronder om het formulier te voltooien',
+      experienceStatement: ', we zijn er trots op een wereldklasse wildlife-ervaring te bieden. Beoordeel alstublieft uw ervaring.',
     },
     placeholders: {
       fullName: 'Voer uw volledige naam in',
@@ -319,6 +325,7 @@ export const translations: Record<LanguageCode, Translation> = {
       childrenNames: 'Quali sono i nomi dei bambini che viaggiano con te?',
       termsAccepted: 'Accetto i termini e le condizioni del modulo di indennizzo, rinuncia e dichiarazione di non responsabilità.',
       signature: 'Per favore firma qui sotto per completare il modulo',
+      experienceStatement: ', siamo orgogliosi di offrire un\'esperienza naturalistica di livello mondiale. Per favore valuta l\'esperienza che hai avuto.',
     },
     placeholders: {
       fullName: 'Inserisci il tuo nome completo',
@@ -367,6 +374,7 @@ export const translations: Record<LanguageCode, Translation> = {
       childrenNames: 'Как зовут детей, которые путешествуют с вами?',
       termsAccepted: 'Я принимаю условия формы об освобождении от ответственности, отказе от претензий и оговорке.',
       signature: 'Пожалуйста, поставьте подпись ниже, чтобы завершить форму',
+      experienceStatement: ', мы гордимся тем, что предоставляем первоклассный опыт наблюдения за дикой природой. Пожалуйста, оцените ваш опыт.',
     },
     placeholders: {
       fullName: 'Введите ваше полное имя',
@@ -415,6 +423,7 @@ export const translations: Record<LanguageCode, Translation> = {
       childrenNames: '与您同行的儿童姓名是什么？',
       termsAccepted: '我接受赔偿、豁免和免责声明表格的条款和条件。',
       signature: '请在下方签名以完成表格',
+      experienceStatement: '，我们以提供世界级的野生动物体验为荣。请为您的体验打分。',
     },
     placeholders: {
       fullName: '请输入您的全名',

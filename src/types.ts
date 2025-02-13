@@ -1,6 +1,6 @@
 export interface Question {
   id: string;
-  type: 'text' | 'email' | 'select' | 'date' | 'checkbox' | 'signature' | 'language';
+  type: 'text' | 'email' | 'select' | 'statement' | 'date' | 'checkbox' | 'signature' | 'language';
   question: string;
   placeholder?: string;
   options?: string[];

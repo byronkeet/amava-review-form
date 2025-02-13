@@ -12,6 +12,7 @@ import { supabase } from './lib/supabase';
 import { EmailCard } from './components/EmailCard';
 import naturalSelectionLogo from '/natural-selection-logo.png';
 import tuludiLogo from '/tuludi-logo.jpg';
+import { StatementCard } from './components/StatementCard';
 
 const createQuestions = (lang: LanguageCode): Question[] => [
   {
@@ -45,6 +46,11 @@ const createQuestions = (lang: LanguageCode): Question[] => [
     type: 'text',
     question: translations[lang].questions.travelAgent,
     placeholder: translations[lang].placeholders.travelAgent,
+  },
+  {
+    id: 'experienceStatement',
+    type: 'statement',
+    question: translations[lang].questions.experienceStatement,
   },
   {
     id: 'birthday',
@@ -101,7 +107,7 @@ const createQuestions = (lang: LanguageCode): Question[] => [
     id: 'signature',
     type: 'signature',
     question: translations[lang].questions.signature,
-  }
+  },
 ];
 
 function App() {
@@ -288,88 +294,109 @@ function App() {
     );
   }
 
+  const renderQuestion = (question: Question) => {
+    if (question.type === 'statement') {
+      return (
+        <StatementCard
+          name={formState.fullName || ''}
+          statement={question.question}
+          currentIndex={currentQuestion}
+          totalQuestions={questions.length}
+          onBack={handleBack}
+          onNext={handleNext}
+          backText={translations[language].buttons.back}
+          nextText={translations[language].buttons.next}
+        />
+      );
+    }
+    if (question.type === 'email') {
+      return (
+        <EmailCard
+          question={question.question}
+          currentIndex={currentQuestion}
+          totalQuestions={questions.length}
+          onBack={handleBack}
+          onNext={handleNext}
+          currentValue={formState[question.id] as string}
+          showBackButton={!question.isWelcome}
+          backText={translations[language].buttons.back}
+          nextText={isSubmitting ? '...' : translations[language].buttons.next}
+          placeholder={question.placeholder}
+        />
+      );
+    }
+    return (
+      <QuestionCard
+        key={question.id}
+        question={question.question}
+        currentIndex={currentQuestion}
+        totalQuestions={questions.length}
+        onBack={handleBack}
+        onNext={handleNext}
+        currentValue={formState[question.id]}
+        showBackButton={!question.isWelcome}
+        backText={translations[language].buttons.back}
+        nextText={isSubmitting ? '...' : translations[language].buttons.next}
+      >
+        {question.type === 'select' ? (
+          <Select
+            options={question.options || []}
+            value={formState[question.id] as string || ''}
+            onChange={(value) => setFormState(prev => ({ ...prev, [question.id]: value }))}
+            placeholder={translations[language].placeholders.nationality}
+          />
+        ) : question.type === 'checkbox' ? (
+          <div className="grid gap-2 sm:gap-3">
+            {question.options?.map((option) => (
+              <button
+                key={option}
+                onClick={() => setFormState(prev => ({ ...prev, [question.id]: option === translations[language].buttons.yes }))}
+                className={`w-full text-left px-4 py-3 sm:px-6 sm:py-4 rounded-lg transition-colors duration-200 text-sm sm:text-base
+                  ${formState[question.id] === (option === translations[language].buttons.yes)
+                    ? 'bg-[#b4854b] text-white'
+                    : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
+                  }`}
+              >
+                {option}
+              </button>
+            ))}
+          </div>
+        ) : question.type === 'date' ? (
+          <DatePicker
+            value={formState[question.id] as string || ''}
+            onChange={(value) => setFormState(prev => ({ ...prev, [question.id]: value }))}
+            placeholder={translations[language].placeholders.birthday}
+          />
+        ) : question.type === 'signature' ? (
+          <div className="w-full max-w-2xl mx-auto px-4 sm:px-0">
+            <SignaturePad 
+              onSign={(value) => setFormState(prev => ({ ...prev, [question.id]: value }))} 
+              clearText={translations[language].buttons.clear}
+            />
+          </div>
+        ) : (
+          <input
+            type={question.type}
+            placeholder={question.placeholder}
+            value={formState[question.id] as string || ''}
+            onChange={(e) => setFormState(prev => ({ ...prev, [question.id]: e.target.value }))}
+            onKeyPress={(e) => handleKeyPress(e, formState[question.id] as string || '')}
+            className="w-full bg-transparent border-b-2 border-gray-200 px-3 py-3 sm:px-4 sm:py-4 
+                     text-lg sm:text-2xl text-gray-900 placeholder-gray-400 focus:border-[#b4854b] 
+                     focus:outline-none transition-colors duration-200"
+          />
+        )}
+      </QuestionCard>
+    );
+  };
+
   return (
     <div className="min-h-screen bg-white flex items-center justify-center p-4 sm:p-6">
       <Logo />
       <ProgressBar progress={progress} />
       
       <AnimatePresence mode="wait">
-        {currentQ.type === 'email' ? (
-          <EmailCard
-            question={currentQ.question}
-            currentIndex={currentQuestion}
-            totalQuestions={questions.length}
-            onBack={handleBack}
-            onNext={handleNext}
-            currentValue={formState[currentQ.id] as string}
-            showBackButton={!currentQ.isWelcome}
-            backText={t.buttons.back}
-            nextText={isSubmitting ? '...' : t.buttons.next}
-            placeholder={currentQ.placeholder}
-          />
-        ) : (
-          <QuestionCard
-            key={currentQ.id}
-            question={currentQ.question}
-            currentIndex={currentQuestion}
-            totalQuestions={questions.length}
-            onBack={handleBack}
-            onNext={handleNext}
-            currentValue={formState[currentQ.id]}
-            showBackButton={!currentQ.isWelcome}
-            backText={t.buttons.back}
-            nextText={isSubmitting ? '...' : t.buttons.next}
-          >
-            {currentQ.type === 'select' ? (
-              <Select
-                options={currentQ.options || []}
-                value={formState[currentQ.id] as string || ''}
-                onChange={(value) => setFormState(prev => ({ ...prev, [currentQ.id]: value }))}
-                placeholder={t.placeholders.nationality}
-              />
-            ) : currentQ.type === 'checkbox' ? (
-              <div className="grid gap-2 sm:gap-3">
-                {currentQ.options?.map((option) => (
-                  <button
-                    key={option}
-                    onClick={() => setFormState(prev => ({ ...prev, [currentQ.id]: option === t.buttons.yes }))}
-                    className={`w-full text-left px-4 py-3 sm:px-6 sm:py-4 rounded-lg transition-colors duration-200 text-sm sm:text-base
-                      ${formState[currentQ.id] === (option === t.buttons.yes)
-                        ? 'bg-[#b4854b] text-white'
-                        : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
-                      }`}
-                  >
-                    {option}
-                  </button>
-                ))}
-              </div>
-            ) : currentQ.type === 'date' ? (
-              <DatePicker
-                value={formState[currentQ.id] as string || ''}
-                onChange={(value) => setFormState(prev => ({ ...prev, [currentQ.id]: value }))}
-                placeholder={t.placeholders.birthday}
-              />
-            ) : currentQ.type === 'signature' ? (
-              <div className="w-full max-w-2xl mx-auto px-4 sm:px-0">
-                <SignaturePad 
-                  onSign={(value) => setFormState(prev => ({ ...prev, [currentQ.id]: value }))} 
-                  clearText={t.buttons.clear}
-                />
-              </div>
-            ) : (
-              <input
-                type={currentQ.type}
-                placeholder={currentQ.placeholder}
-                value={formState[currentQ.id] as string || ''}
-                onChange={(e) => setFormState(prev => ({ ...prev, [currentQ.id]: e.target.value }))}
-                onKeyPress={(e) => handleKeyPress(e, formState[currentQ.id] as string || '')}
-                className="w-full bg-transparent border-b-2 border-gray-200 px-3 py-3 sm:px-4 sm:py-4 
-                         text-lg sm:text-2xl text-gray-900 placeholder-gray-400 focus:border-[#b4854b] 
-                         focus:outline-none transition-colors duration-200"
-              />
-            )}
-          </QuestionCard>
-        )}
+        {renderQuestion(currentQ)}
       </AnimatePresence>
     </div>
   );
