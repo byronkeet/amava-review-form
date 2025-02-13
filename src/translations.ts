@@ -24,6 +24,7 @@ export interface Translation {
     keySightingsSubtitle: string;
     activities: string;
     activitiesSubtitle: string;
+    wildlifeComments: string;
   };
   placeholders: {
     fullName: string;
@@ -35,6 +36,7 @@ export interface Translation {
     birthday: string;
     travelAgent: string;
     guide: string;
+    wildlifeComments: string;
   };
   buttons: {
     next: string;
@@ -98,6 +100,8 @@ export const translations: Record<LanguageCode, Translation> = {
       keySightingsSubtitle: "Select which animals you saw on your game drive",
       activities: "What activities did you do?",
       activitiesSubtitle: "Select all the activities you did during your stay",
+      wildlifeComments:
+        "Any further comments or recommendations about our wildlife experience?",
     },
     placeholders: {
       fullName: "Enter your full name",
@@ -109,6 +113,7 @@ export const translations: Record<LanguageCode, Translation> = {
       childrenNames: "Enter children names",
       birthday: "Select your date of birth",
       guide: "Select your guide",
+      wildlifeComments: "Enter your comments here",
     },
     buttons: {
       next: "Next",
@@ -159,6 +164,8 @@ export const translations: Record<LanguageCode, Translation> = {
       activities: "¿Qué actividades realizaste?",
       activitiesSubtitle:
         "Selecciona todas las actividades que hiciste durante tu estancia",
+      wildlifeComments:
+        "¿Algún comentario o recomendación adicional sobre nuestra experiencia con la vida silvestre?",
     },
     placeholders: {
       fullName: "Ingrese su nombre completo",
@@ -170,6 +177,7 @@ export const translations: Record<LanguageCode, Translation> = {
       childrenNames: "Ingrese los nombres de los niños",
       birthday: "Seleccione su fecha de nacimiento",
       guide: "Selecciona tu guía",
+      wildlifeComments: "Ingrese sus comentarios aquí",
     },
     buttons: {
       next: "Siguiente",
@@ -220,6 +228,8 @@ export const translations: Record<LanguageCode, Translation> = {
       activities: "Quelles activités avez-vous faites ?",
       activitiesSubtitle:
         "Sélectionnez toutes les activités que vous avez faites pendant votre séjour",
+      wildlifeComments:
+        "Avez-vous d'autres commentaires ou recommandations concernant notre expérience de la faune ?",
     },
     placeholders: {
       fullName: "Entrez votre nom complet",
@@ -231,6 +241,7 @@ export const translations: Record<LanguageCode, Translation> = {
       childrenNames: "Entrez les noms des enfants",
       birthday: "Sélectionnez votre date de naissance",
       guide: "Sélectionnez votre guide",
+      wildlifeComments: "Entrez vos commentaires ici",
     },
     buttons: {
       next: "Suivant",
@@ -282,6 +293,8 @@ export const translations: Record<LanguageCode, Translation> = {
       activities: "Welche Aktivitäten haben Sie unternommen?",
       activitiesSubtitle:
         "Wählen Sie alle Aktivitäten aus, die Sie während Ihres Aufenthalts gemacht haben",
+      wildlifeComments:
+        "Haben Sie weitere Kommentare oder Empfehlungen zu unserem Wildlife-Erlebnis?",
     },
     placeholders: {
       fullName: "Geben Sie Ihren vollständigen Namen ein",
@@ -293,6 +306,7 @@ export const translations: Record<LanguageCode, Translation> = {
       childrenNames: "Geben Sie die Namen der Kinder ein",
       birthday: "Wählen Sie Ihr Geburtsdatum",
       guide: "Wählen Sie Ihren Guide",
+      wildlifeComments: "Geben Sie hier Ihre Kommentare ein",
     },
     buttons: {
       next: "Weiter",
@@ -343,6 +357,8 @@ export const translations: Record<LanguageCode, Translation> = {
       activities: "Welke activiteiten heeft u gedaan?",
       activitiesSubtitle:
         "Selecteer alle activiteiten die u tijdens uw verblijf heeft gedaan",
+      wildlifeComments:
+        "Heeft u nog andere opmerkingen of aanbevelingen over onze wildlife-ervaring?",
     },
     placeholders: {
       fullName: "Voer uw volledige naam in",
@@ -354,6 +370,7 @@ export const translations: Record<LanguageCode, Translation> = {
       childrenNames: "Voer de namen van de kinderen in",
       birthday: "Selecteer uw geboortedatum",
       guide: "Selecteer uw gids",
+      wildlifeComments: "Voer hier uw opmerkingen in",
     },
     buttons: {
       next: "Volgende",
@@ -404,6 +421,8 @@ export const translations: Record<LanguageCode, Translation> = {
       activities: "Quali attività hai fatto?",
       activitiesSubtitle:
         "Seleziona tutte le attività che hai fatto durante il tuo soggiorno",
+      wildlifeComments:
+        "Hai altri commenti o suggerimenti sulla nostra esperienza con la fauna selvatica?",
     },
     placeholders: {
       fullName: "Inserisci il tuo nome completo",
@@ -415,6 +434,7 @@ export const translations: Record<LanguageCode, Translation> = {
       childrenNames: "Inserisci i nomi dei bambini",
       birthday: "Seleziona la tua data di nascita",
       guide: "Seleziona la tua guida",
+      wildlifeComments: "Inserisci qui i tuoi commenti",
     },
     buttons: {
       next: "Avanti",
@@ -465,6 +485,8 @@ export const translations: Record<LanguageCode, Translation> = {
       activities: "Какие мероприятия вы посетили?",
       activitiesSubtitle:
         "Выберите все мероприятия, которые вы посетили во время пребывания",
+      wildlifeComments:
+        "Есть ли у вас дополнительные комментарии или рекомендации о нашем опыте наблюдения за дикой природой?",
     },
     placeholders: {
       fullName: "Введите ваше полное имя",
@@ -476,6 +498,7 @@ export const translations: Record<LanguageCode, Translation> = {
       childrenNames: "Введите имена детей",
       birthday: "Выберите дату рождения",
       guide: "Выберите вашего гида",
+      wildlifeComments: "Введите ваши комментарии здесь",
     },
     buttons: {
       next: "Далее",
@@ -523,6 +546,7 @@ export const translations: Record<LanguageCode, Translation> = {
       keySightingsSubtitle: "选择您在游猎过程中看到的动物",
       activities: "您参加了哪些活动？",
       activitiesSubtitle: "选择您在住宿期间参加的所有活动",
+      wildlifeComments: "对我们的野生动物体验有任何其他意见或建议吗？",
     },
     placeholders: {
       fullName: "请输入您的全名",
@@ -534,6 +558,7 @@ export const translations: Record<LanguageCode, Translation> = {
       childrenNames: "输入儿童姓名",
       birthday: "选择您的出生日期",
       guide: "选择您的向导",
+      wildlifeComments: "在此输入您的评论",
     },
     buttons: {
       next: "下一步",

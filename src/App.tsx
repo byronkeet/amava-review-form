@@ -103,6 +103,12 @@ const createQuestions = (lang: LanguageCode): Question[] => [
     options: activities,
   },
   {
+    id: "wildlifeComments",
+    type: "text",
+    question: translations[lang].questions.wildlifeComments,
+    placeholder: translations[lang].placeholders.wildlifeComments,
+  },
+  {
     id: "birthday",
     type: "date",
     question: translations[lang].questions.birthday,
