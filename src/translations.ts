@@ -61,8 +61,8 @@ export type LanguageCode = typeof languages[number]['code'];
 export const translations: Record<LanguageCode, Translation> = {
   en: {
     welcome: {
-      title: 'Welcome to Tuludi',
-      subtitle: 'Please complete your indemnity form',
+      title: 'Talude Feedback',
+      subtitle: 'Please complete your review',
       start: 'Start',
     },
     questions: {
@@ -107,8 +107,8 @@ export const translations: Record<LanguageCode, Translation> = {
   },
   es: {
     welcome: {
-      title: 'Bienvenido a Tuludi',
-      subtitle: 'Por favor complete su formulario de indemnización',
+      title: 'Comentarios de Talude',
+      subtitle: 'Por favor complete su reseña',
       start: 'Comenzar',
     },
     questions: {
@@ -153,8 +153,8 @@ export const translations: Record<LanguageCode, Translation> = {
   },
   fr: {
     welcome: {
-      title: 'Bienvenue à Tuludi',
-      subtitle: 'Veuillez remplir votre formulaire d\'indemnisation',
+      title: 'Avis Talude',
+      subtitle: 'Veuillez compléter votre évaluation',
       start: 'Commencer',
     },
     questions: {
@@ -199,8 +199,8 @@ export const translations: Record<LanguageCode, Translation> = {
   },
   de: {
     welcome: {
-      title: 'Willkommen bei Tuludi',
-      subtitle: 'Bitte füllen Sie Ihr Entschädigungsformular aus',
+      title: 'Talude Feedback',
+      subtitle: 'Bitte vervollständigen Sie Ihre Bewertung',
       start: 'Beginnen',
     },
     questions: {
@@ -245,8 +245,8 @@ export const translations: Record<LanguageCode, Translation> = {
   },
   nl: {
     welcome: {
-      title: 'Welkom bij Tuludi',
-      subtitle: 'Vul alstublieft uw vrijwaringsformulier in',
+      title: 'Talude Feedback',
+      subtitle: 'Vul alstublieft uw beoordeling in',
       start: 'Start',
     },
     questions: {
@@ -291,8 +291,8 @@ export const translations: Record<LanguageCode, Translation> = {
   },
   it: {
     welcome: {
-      title: 'Benvenuto a Tuludi',
-      subtitle: 'Per favore completa il tuo modulo di indennizzo',
+      title: 'Feedback Talude',
+      subtitle: 'Per favore completa la tua recensione',
       start: 'Inizia',
     },
     questions: {
@@ -337,8 +337,8 @@ export const translations: Record<LanguageCode, Translation> = {
   },
   ru: {
     welcome: {
-      title: 'Добро пожаловать в Tuludi',
-      subtitle: 'Пожалуйста, заполните форму об освобождении от ответственности',
+      title: 'Отзывы о Talude',
+      subtitle: 'Пожалуйста, заполните свой отзыв',
       start: 'Начать',
     },
     questions: {
@@ -383,8 +383,8 @@ export const translations: Record<LanguageCode, Translation> = {
   },
   zh: {
     welcome: {
-      title: '欢迎来到Tuludi',
-      subtitle: '请填写免责声明表格',
+      title: 'Talude 反馈',
+      subtitle: '请完成您的评价',
       start: '开始',
     },
     questions: {
