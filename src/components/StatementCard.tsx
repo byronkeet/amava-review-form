@@ -41,7 +41,9 @@ export const StatementCard: React.FC<StatementCardProps> = ({
             {statement}
           </p>
           {subtitle && (
-            <p className="text-gray-600 text-base sm:text-lg">{subtitle}</p>
+            <p className="text-gray-600 text-sm sm:text-base italic">
+              {subtitle}
+            </p>
           )}
         </div>
 

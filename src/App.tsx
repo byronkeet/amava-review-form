@@ -109,6 +109,12 @@ const createQuestions = (lang: LanguageCode): Question[] => [
     placeholder: translations[lang].placeholders.wildlifeComments,
   },
   {
+    id: "hospitalityStatement",
+    type: "statement",
+    question: translations[lang].questions.hospitalityStatement,
+    subtitle: translations[lang].questions.hospitalitySubtitle,
+  },
+  {
     id: "birthday",
     type: "date",
     question: translations[lang].questions.birthday,
@@ -371,10 +377,11 @@ function App() {
         <StatementCard
           name={(formState.fullName as string) || ""}
           statement={question.question}
+          subtitle={question.subtitle}
           currentIndex={currentQuestion}
           totalQuestions={questions.length}
           onBack={handleBack}
-          onNext={handleNext}
+          onNext={() => handleNext("started")}
           backText={translations[language].buttons.back}
           nextText={translations[language].buttons.next}
         />

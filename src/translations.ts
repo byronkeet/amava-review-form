@@ -25,6 +25,8 @@ export interface Translation {
     activities: string;
     activitiesSubtitle: string;
     wildlifeComments: string;
+    hospitalityStatement: string;
+    hospitalitySubtitle: string;
   };
   placeholders: {
     fullName: string;
@@ -102,6 +104,9 @@ export const translations: Record<LanguageCode, Translation> = {
       activitiesSubtitle: "Select all the activities you did during your stay",
       wildlifeComments:
         "Any further comments or recommendations about our wildlife experience?",
+      hospitalityStatement: ", please rate our hospitality.",
+      hospitalitySubtitle:
+        "Your valued opinion allows us to constantly improve our service and our camp.",
     },
     placeholders: {
       fullName: "Enter your full name",
@@ -166,6 +171,9 @@ export const translations: Record<LanguageCode, Translation> = {
         "Selecciona todas las actividades que hiciste durante tu estancia",
       wildlifeComments:
         "¿Algún comentario o recomendación adicional sobre nuestra experiencia con la vida silvestre?",
+      hospitalityStatement: ", por favor califica nuestra hospitalidad.",
+      hospitalitySubtitle:
+        "Tu valiosa opinión nos permite mejorar constantemente nuestro servicio y nuestro campamento.",
     },
     placeholders: {
       fullName: "Ingrese su nombre completo",
@@ -230,6 +238,9 @@ export const translations: Record<LanguageCode, Translation> = {
         "Sélectionnez toutes les activités que vous avez faites pendant votre séjour",
       wildlifeComments:
         "Avez-vous d'autres commentaires ou recommandations concernant notre expérience de la faune ?",
+      hospitalityStatement: ", merci d'évaluer notre hospitalité.",
+      hospitalitySubtitle:
+        "Votre précieux avis nous permet d'améliorer constamment notre service et notre camp.",
     },
     placeholders: {
       fullName: "Entrez votre nom complet",
@@ -295,6 +306,9 @@ export const translations: Record<LanguageCode, Translation> = {
         "Wählen Sie alle Aktivitäten aus, die Sie während Ihres Aufenthalts gemacht haben",
       wildlifeComments:
         "Haben Sie weitere Kommentare oder Empfehlungen zu unserem Wildlife-Erlebnis?",
+      hospitalityStatement: ", bitte bewerten Sie unsere Gastfreundschaft.",
+      hospitalitySubtitle:
+        "Ihre wertvolle Meinung ermöglicht es uns, unseren Service und unser Camp stetig zu verbessern.",
     },
     placeholders: {
       fullName: "Geben Sie Ihren vollständigen Namen ein",
@@ -359,6 +373,9 @@ export const translations: Record<LanguageCode, Translation> = {
         "Selecteer alle activiteiten die u tijdens uw verblijf heeft gedaan",
       wildlifeComments:
         "Heeft u nog andere opmerkingen of aanbevelingen over onze wildlife-ervaring?",
+      hospitalityStatement: ", beoordeel alstublieft onze gastvrijheid.",
+      hospitalitySubtitle:
+        "Uw waardevolle mening stelt ons in staat onze service en ons kamp voortdurend te verbeteren.",
     },
     placeholders: {
       fullName: "Voer uw volledige naam in",
@@ -423,6 +440,9 @@ export const translations: Record<LanguageCode, Translation> = {
         "Seleziona tutte le attività che hai fatto durante il tuo soggiorno",
       wildlifeComments:
         "Hai altri commenti o suggerimenti sulla nostra esperienza con la fauna selvatica?",
+      hospitalityStatement: ", ti preghiamo di valutare la nostra ospitalità.",
+      hospitalitySubtitle:
+        "La tua preziosa opinione ci permette di migliorare costantemente il nostro servizio e il nostro campo.",
     },
     placeholders: {
       fullName: "Inserisci il tuo nome completo",
@@ -487,6 +507,9 @@ export const translations: Record<LanguageCode, Translation> = {
         "Выберите все мероприятия, которые вы посетили во время пребывания",
       wildlifeComments:
         "Есть ли у вас дополнительные комментарии или рекомендации о нашем опыте наблюдения за дикой природой?",
+      hospitalityStatement: ", пожалуйста, оцените наше гостеприимство.",
+      hospitalitySubtitle:
+        "Ваше ценное мнение позволяет нам постоянно улучшать наш сервис и наш лагерь.",
     },
     placeholders: {
       fullName: "Введите ваше полное имя",
@@ -547,6 +570,8 @@ export const translations: Record<LanguageCode, Translation> = {
       activities: "您参加了哪些活动？",
       activitiesSubtitle: "选择您在住宿期间参加的所有活动",
       wildlifeComments: "对我们的野生动物体验有任何其他意见或建议吗？",
+      hospitalityStatement: "，请评价我们的待客之道。",
+      hospitalitySubtitle: "您的宝贵意见使我们能够不断改进我们的服务和营地。",
     },
     placeholders: {
       fullName: "请输入您的全名",
