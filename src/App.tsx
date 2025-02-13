@@ -21,6 +21,16 @@ const guides = ["Amos", "KG", "Tony", "Ness"];
 
 const animals = ["Lion", "Elephant", "Leopard", "Cheetah", "Buffalo", "Other"];
 
+const activities = [
+  "Game Drive",
+  "Guided Walk",
+  "Mokoro",
+  "Boat Trip",
+  "Fishing",
+  "Ranger's Experience",
+  "Village Tour",
+];
+
 const createQuestions = (lang: LanguageCode): Question[] => [
   {
     id: "welcome",
@@ -28,6 +38,13 @@ const createQuestions = (lang: LanguageCode): Question[] => [
     question: translations[lang].welcome.title,
     placeholder: translations[lang].welcome.subtitle,
     isWelcome: true,
+  },
+  {
+    id: "activities",
+    type: "multiselect",
+    question: translations[lang].questions.activities,
+    subtitle: translations[lang].questions.activitiesSubtitle,
+    options: activities,
   },
   {
     id: "fullName",

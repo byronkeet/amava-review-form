@@ -22,6 +22,8 @@ export interface Translation {
     guideRating: string;
     keySightings: string;
     keySightingsSubtitle: string;
+    activities: string;
+    activitiesSubtitle: string;
   };
   placeholders: {
     fullName: string;
@@ -94,6 +96,8 @@ export const translations: Record<LanguageCode, Translation> = {
       guideRating: "Rate Your Guide",
       keySightings: "Key Sightings",
       keySightingsSubtitle: "Select which animals you saw on your game drive",
+      activities: "What activities did you do?",
+      activitiesSubtitle: "Select all the activities you did during your stay",
     },
     placeholders: {
       fullName: "Enter your full name",
@@ -152,6 +156,9 @@ export const translations: Record<LanguageCode, Translation> = {
       guideRating: "Califica a Tu Guía",
       keySightings: "Avistamientos Principales",
       keySightingsSubtitle: "Selecciona qué animales viste en tu safari",
+      activities: "¿Qué actividades realizaste?",
+      activitiesSubtitle:
+        "Selecciona todas las actividades que hiciste durante tu estancia",
     },
     placeholders: {
       fullName: "Ingrese su nombre completo",
@@ -210,6 +217,9 @@ export const translations: Record<LanguageCode, Translation> = {
       keySightings: "Observations Principales",
       keySightingsSubtitle:
         "Sélectionnez les animaux que vous avez vus lors de votre safari",
+      activities: "Quelles activités avez-vous faites ?",
+      activitiesSubtitle:
+        "Sélectionnez toutes les activités que vous avez faites pendant votre séjour",
     },
     placeholders: {
       fullName: "Entrez votre nom complet",
@@ -269,6 +279,9 @@ export const translations: Record<LanguageCode, Translation> = {
       keySightings: "Wichtige Sichtungen",
       keySightingsSubtitle:
         "Wählen Sie aus, welche Tiere Sie auf Ihrer Safaritour gesehen haben",
+      activities: "Welche Aktivitäten haben Sie unternommen?",
+      activitiesSubtitle:
+        "Wählen Sie alle Aktivitäten aus, die Sie während Ihres Aufenthalts gemacht haben",
     },
     placeholders: {
       fullName: "Geben Sie Ihren vollständigen Namen ein",
@@ -327,6 +340,9 @@ export const translations: Record<LanguageCode, Translation> = {
       keySightings: "Belangrijke Waarnemingen",
       keySightingsSubtitle:
         "Selecteer welke dieren u heeft gezien tijdens uw gamedrive",
+      activities: "Welke activiteiten heeft u gedaan?",
+      activitiesSubtitle:
+        "Selecteer alle activiteiten die u tijdens uw verblijf heeft gedaan",
     },
     placeholders: {
       fullName: "Voer uw volledige naam in",
@@ -385,6 +401,9 @@ export const translations: Record<LanguageCode, Translation> = {
       keySightings: "Avvistamenti Principali",
       keySightingsSubtitle:
         "Seleziona quali animali hai visto durante il tuo safari",
+      activities: "Quali attività hai fatto?",
+      activitiesSubtitle:
+        "Seleziona tutte le attività che hai fatto durante il tuo soggiorno",
     },
     placeholders: {
       fullName: "Inserisci il tuo nome completo",
@@ -443,6 +462,9 @@ export const translations: Record<LanguageCode, Translation> = {
       keySightings: "Ключевые Наблюдения",
       keySightingsSubtitle:
         "Выберите, каких животных вы видели во время сафари",
+      activities: "Какие мероприятия вы посетили?",
+      activitiesSubtitle:
+        "Выберите все мероприятия, которые вы посетили во время пребывания",
     },
     placeholders: {
       fullName: "Введите ваше полное имя",
@@ -499,6 +521,8 @@ export const translations: Record<LanguageCode, Translation> = {
       guideRating: "评价您的向导",
       keySightings: "重要观察",
       keySightingsSubtitle: "选择您在游猎过程中看到的动物",
+      activities: "您参加了哪些活动？",
+      activitiesSubtitle: "选择您在住宿期间参加的所有活动",
     },
     placeholders: {
       fullName: "请输入您的全名",
