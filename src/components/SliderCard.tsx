@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface SliderCardProps {
   question: string | JSX.Element;
-  currentValue: number;
   min: number;
   max: number;
+  defaultValue?: string;
+  currentValue: number;
   onChange: (value: number) => void;
   currentIndex: number;
   totalQuestions: number;
@@ -18,9 +19,10 @@ interface SliderCardProps {
 
 export const SliderCard: React.FC<SliderCardProps> = ({
   question,
-  currentValue,
   min,
   max,
+  defaultValue,
+  currentValue,
   onChange,
   currentIndex,
   totalQuestions,
@@ -29,6 +31,12 @@ export const SliderCard: React.FC<SliderCardProps> = ({
   backText,
   nextText,
 }) => {
+  useEffect(() => {
+    if (defaultValue && currentValue === undefined) {
+      onChange(Number(defaultValue));
+    }
+  }, [defaultValue, currentValue, onChange]);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}

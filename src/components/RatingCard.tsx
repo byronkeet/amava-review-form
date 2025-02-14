@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Circle } from "lucide-react";
@@ -6,6 +6,7 @@ import { Circle } from "lucide-react";
 interface RatingCardProps {
   question: string | JSX.Element;
   subtitle?: string;
+  defaultValue?: string;
   currentValue?: number;
   onChange: (value: number) => void;
   currentIndex: number;
@@ -19,6 +20,7 @@ interface RatingCardProps {
 export const RatingCard: React.FC<RatingCardProps> = ({
   question,
   subtitle,
+  defaultValue,
   currentValue,
   onChange,
   currentIndex,
@@ -29,6 +31,13 @@ export const RatingCard: React.FC<RatingCardProps> = ({
   nextText,
 }) => {
   const [hoverValue, setHoverValue] = useState<number | null>(null);
+
+  // Use defaultValue if currentValue is not set
+  useEffect(() => {
+    if (defaultValue && currentValue === undefined) {
+      onChange(Number(defaultValue));
+    }
+  }, [defaultValue, currentValue, onChange]);
 
   // Only use hover value for display if we're actually hovering
   const displayValue = hoverValue !== null ? hoverValue : currentValue;

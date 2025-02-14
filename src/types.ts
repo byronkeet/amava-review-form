@@ -28,6 +28,7 @@ export interface Question {
   isThankYou?: boolean;
   fullName?: string;
   showName?: boolean;
+  defaultValue?: string;
 }
 
 export interface FormState {

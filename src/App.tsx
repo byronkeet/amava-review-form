@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useMemo } from "react";
 import { AnimatePresence } from "framer-motion";
 import { Question, FormState, countries } from "./types";
 import { QuestionCard } from "./components/QuestionCard";
@@ -9,8 +9,6 @@ import { Select } from "./components/Select";
 import { languages, translations, type LanguageCode } from "./translations";
 import { supabase } from "./lib/supabase";
 import { EmailCard } from "./components/EmailCard";
-import naturalSelectionLogo from "/natural-selection-logo.png";
-import tuludiLogo from "/tuludi-logo.jpg";
 import { StatementCard } from "./components/StatementCard";
 import { SliderCard } from "./components/SliderCard";
 import { RatingCard } from "./components/RatingCard";
@@ -57,176 +55,196 @@ const marketingSources = (lang: LanguageCode) => [
   translations[lang].options.other,
 ];
 
-const createQuestions = (lang: LanguageCode): Question[] => [
-  {
-    id: "welcome",
-    type: "text",
-    question: translations[lang].welcome.title,
-    placeholder: translations[lang].welcome.subtitle,
-    isWelcome: true,
-  },
-  {
-    id: "fullName",
-    type: "text",
-    question: translations[lang].questions.fullName,
-    placeholder: translations[lang].placeholders.fullName,
-  },
-  {
-    id: "email",
-    type: "email",
-    question: translations[lang].questions.email,
-    placeholder: translations[lang].placeholders.email,
-  },
-  {
-    id: "nationality",
-    type: "select",
-    question: translations[lang].questions.nationality,
-    placeholder: translations[lang].placeholders.nationality,
-    options: countries,
-  },
-  {
-    id: "travelAgent",
-    type: "text",
-    question: translations[lang].questions.travelAgent,
-    placeholder: translations[lang].placeholders.travelAgent,
-  },
-  {
-    id: "experienceStatement",
-    type: "statement",
-    question: translations[lang].questions.experienceStatement,
-  },
-  {
-    id: "wildlifeExperience",
-    type: "slider",
-    question: translations[lang].questions.wildlifeExperience,
-    min: 0,
-    max: 10,
-  },
-  {
-    id: "guide",
-    type: "select",
-    question: translations[lang].questions.guide,
-    placeholder: translations[lang].placeholders.guide,
-    options: guides,
-  },
-  {
-    id: "guideRating",
-    type: "rating",
-    question: translations[lang].questions.guideRating,
-  },
-  {
-    id: "keySightings",
-    type: "multiselect",
-    question: translations[lang].questions.keySightings,
-    subtitle: translations[lang].questions.keySightingsSubtitle,
-    options: animals,
-  },
-  {
-    id: "activities",
-    type: "multiselect",
-    question: translations[lang].questions.activities,
-    subtitle: translations[lang].questions.activitiesSubtitle,
-    options: activities,
-  },
-  {
-    id: "wildlifeComments",
-    type: "text",
-    question: translations[lang].questions.wildlifeComments,
-    placeholder: translations[lang].placeholders.wildlifeComments,
-  },
-  {
-    id: "hospitalityStatement",
-    type: "statement",
-    question: translations[lang].questions.hospitalityStatement,
-    subtitle: translations[lang].questions.hospitalitySubtitle,
-  },
-  {
-    id: "accommodationRating",
-    type: "rating",
-    question: translations[lang].questions.accommodationRating,
-  },
-  {
-    id: "facilitiesRating",
-    type: "rating",
-    question: translations[lang].questions.facilitiesRating,
-  },
-  {
-    id: "foodRating",
-    type: "rating",
-    question: translations[lang].questions.foodRating,
-  },
-  {
-    id: "housekeepingRating",
-    type: "rating",
-    question: translations[lang].questions.housekeepingRating,
-  },
-  {
-    id: "staffRating",
-    type: "rating",
-    question: translations[lang].questions.staffRating,
-  },
-  {
-    id: "staffStandout",
-    type: "multiselectdropdown",
-    question: translations[lang].questions.staffStandout,
-    subtitle: translations[lang].questions.staffStandoutSubtitle,
-    options: staffMembers,
-  },
-  {
-    id: "hospitalityComments",
-    type: "text",
-    question: translations[lang].questions.hospitalityComments,
-    placeholder: translations[lang].placeholders.hospitalityComments,
-  },
-  {
-    id: "recommendTuludi",
-    type: "singleselect",
-    question: translations[lang].questions.recommendTuludi,
-    options: [translations[lang].buttons.yes, translations[lang].buttons.no],
-  },
-  {
-    id: "communicationStatement",
-    type: "statement",
-    question: translations[lang].questions.communicationStatement,
-    subtitle: translations[lang].questions.communicationSubtitle,
-    showName: false,
-  },
-  {
-    id: "communicationRating",
-    type: "rating",
-    question: translations[lang].questions.communicationRating,
-    subtitle: translations[lang].questions.communicationRatingSubtitle,
-  },
-  {
-    id: "marketingSource",
-    type: "select",
-    question: translations[lang].questions.marketingSource,
-    placeholder: translations[lang].placeholders.marketingSource,
-    options: marketingSources(lang),
-  },
-  {
-    id: "overallScoreStatement",
-    type: "statement",
-    question: translations[lang].questions.overallScoreStatement,
-    subtitle: translations[lang].questions.overallScoreSubtitle,
-    showName: false,
-  },
-  {
-    id: "overallExperience",
-    type: "slider",
-    question: translations[lang].questions.overallExperience,
-    min: 0,
-    max: 10,
-  },
-];
+const createQuestions = (lang: LanguageCode): Question[] => {
+  return [
+    {
+      id: "welcome",
+      type: "text",
+      question: translations[lang].welcome.title,
+      placeholder: translations[lang].welcome.subtitle,
+      isWelcome: true,
+    },
+    {
+      id: "fullName",
+      type: "text",
+      question: translations[lang].questions.fullName,
+      placeholder: translations[lang].placeholders.fullName,
+    },
+    {
+      id: "email",
+      type: "email",
+      question: translations[lang].questions.email,
+      placeholder: translations[lang].placeholders.email,
+    },
+    {
+      id: "nationality",
+      type: "select",
+      question: translations[lang].questions.nationality,
+      placeholder: translations[lang].placeholders.nationality,
+      options: countries,
+    },
+    {
+      id: "travelAgent",
+      type: "text",
+      question: translations[lang].questions.travelAgent,
+      placeholder: translations[lang].placeholders.travelAgent,
+    },
+    {
+      id: "experienceStatement",
+      type: "statement",
+      question: translations[lang].questions.experienceStatement,
+    },
+    {
+      id: "wildlifeExperience",
+      type: "slider",
+      question: translations[lang].questions.wildlifeExperience,
+      min: 0,
+      max: 10,
+      defaultValue: "5",
+    },
+    {
+      id: "guide",
+      type: "select",
+      question: translations[lang].questions.guide,
+      placeholder: translations[lang].placeholders.guide,
+      options: guides,
+    },
+    {
+      id: "guideRating",
+      type: "rating",
+      question: translations[lang].questions.guideRating,
+      defaultValue: "1",
+    },
+    {
+      id: "keySightings",
+      type: "multiselect",
+      question: translations[lang].questions.keySightings,
+      subtitle: translations[lang].questions.keySightingsSubtitle,
+      options: animals,
+    },
+    {
+      id: "activities",
+      type: "multiselect",
+      question: translations[lang].questions.activities,
+      subtitle: translations[lang].questions.activitiesSubtitle,
+      options: activities,
+    },
+    {
+      id: "wildlifeComments",
+      type: "text",
+      question: translations[lang].questions.wildlifeComments,
+      placeholder: translations[lang].placeholders.wildlifeComments,
+    },
+    {
+      id: "hospitalityStatement",
+      type: "statement",
+      question: translations[lang].questions.hospitalityStatement,
+      subtitle: translations[lang].questions.hospitalitySubtitle,
+    },
+    {
+      id: "accommodationRating",
+      type: "rating",
+      question: translations[lang].questions.accommodationRating,
+      defaultValue: "1",
+    },
+    {
+      id: "facilitiesRating",
+      type: "rating",
+      question: translations[lang].questions.facilitiesRating,
+      defaultValue: "1",
+    },
+    {
+      id: "foodRating",
+      type: "rating",
+      question: translations[lang].questions.foodRating,
+      defaultValue: "1",
+    },
+    {
+      id: "housekeepingRating",
+      type: "rating",
+      question: translations[lang].questions.housekeepingRating,
+      defaultValue: "1",
+    },
+    {
+      id: "staffRating",
+      type: "rating",
+      question: translations[lang].questions.staffRating,
+      defaultValue: "1",
+    },
+    {
+      id: "staffStandout",
+      type: "multiselectdropdown",
+      question: translations[lang].questions.staffStandout,
+      subtitle: translations[lang].questions.staffStandoutSubtitle,
+      options: staffMembers,
+    },
+    {
+      id: "hospitalityComments",
+      type: "text",
+      question: translations[lang].questions.hospitalityComments,
+      placeholder: translations[lang].placeholders.hospitalityComments,
+    },
+    {
+      id: "recommendTuludi",
+      type: "singleselect",
+      question: translations[lang].questions.recommendTuludi,
+      options: [translations[lang].buttons.yes, translations[lang].buttons.no],
+    },
+    {
+      id: "communicationStatement",
+      type: "statement",
+      question: translations[lang].questions.communicationStatement,
+      subtitle: translations[lang].questions.communicationSubtitle,
+      showName: false,
+    },
+    {
+      id: "communicationRating",
+      type: "rating",
+      question: translations[lang].questions.communicationRating,
+      subtitle: translations[lang].questions.communicationRatingSubtitle,
+      defaultValue: "1",
+    },
+    {
+      id: "marketingSource",
+      type: "select",
+      question: translations[lang].questions.marketingSource,
+      placeholder: translations[lang].placeholders.marketingSource,
+      options: marketingSources(lang),
+    },
+    {
+      id: "overallScoreStatement",
+      type: "statement",
+      question: translations[lang].questions.overallScoreStatement,
+      subtitle: translations[lang].questions.overallScoreSubtitle,
+      showName: false,
+    },
+    {
+      id: "overallExperience",
+      type: "slider",
+      question: translations[lang].questions.overallExperience,
+      min: 0,
+      max: 10,
+      defaultValue: "5",
+    },
+  ];
+};
 
 function App() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [formState, setFormState] = useState<FormState>({});
+  const [formState, setFormState] = useState<FormState>({
+    guideRating: "1",
+    accommodationRating: "1",
+    facilitiesRating: "1",
+    foodRating: "1",
+    housekeepingRating: "1",
+    staffRating: "1",
+    communicationRating: "1",
+    overallExperience: "0",
+  });
   const [isCompleted, setIsCompleted] = useState(false);
   const [language, setLanguage] = useState<LanguageCode>("en");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const questions = createQuestions(language);
+  const questions = useMemo(() => createQuestions(language), [language]);
 
   const handleBack = useCallback(() => {
     if (currentQuestion > 0) {
@@ -351,21 +369,6 @@ function App() {
 
   const progress = (currentQuestion / questions.length) * 100;
 
-  const Logo = () => (
-    <>
-      <div className="fixed top-4 left-4 sm:top-8 sm:left-8">
-        <img
-          src={naturalSelectionLogo}
-          alt="Natural Selection"
-          className="h-12 sm:h-16"
-        />
-      </div>
-      <div className="fixed top-4 right-4 sm:top-8 sm:right-8">
-        <img src={tuludiLogo} alt="Tuludi" className="h-12 sm:h-16" />
-      </div>
-    </>
-  );
-
   if (isCompleted) {
     const t = translations[language];
     return (
@@ -387,7 +390,6 @@ function App() {
   if (currentQ.isWelcome) {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center p-4 sm:p-6">
-        <Logo />
         <div className="text-center space-y-4 sm:space-y-6 max-w-xl px-4">
           <h1 className="text-3xl sm:text-5xl font-bold text-gray-900">
             {currentQ.question}
@@ -690,7 +692,6 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white flex items-center justify-center p-4 sm:p-6">
-      <Logo />
       <ProgressBar progress={progress} />
 
       <AnimatePresence mode="wait">{renderQuestion(currentQ)}</AnimatePresence>

@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { PawPrint } from "lucide-react";
-import Logo from "/tuludi-logo.jpg";
+
 interface CompletionCardProps {
   title: string;
   subtitle: string;
@@ -29,7 +29,6 @@ export const CompletionCard: React.FC<CompletionCardProps> = ({
       exit={{ opacity: 0, y: -20 }}
       className="w-full max-w-2xl p-6 sm:p-8 space-y-8"
     >
-      <Logo />
       <PawPrint className="w-12 h-12 sm:w-16 sm:h-16 mx-auto text-[#b4854b] animate-pulse" />
       <div className="space-y-4">
         <h2 className="text-2xl sm:text-4xl font-bold text-gray-900">
