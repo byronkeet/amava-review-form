@@ -1,6 +1,5 @@
 import React, { useState, useCallback } from "react";
 import { AnimatePresence } from "framer-motion";
-import { PawPrint } from "lucide-react";
 import { Question, FormState, countries } from "./types";
 import { QuestionCard } from "./components/QuestionCard";
 import { ProgressBar } from "./components/ProgressBar";
@@ -18,6 +17,7 @@ import { RatingCard } from "./components/RatingCard";
 import { MultiSelectCard } from "./components/MultiSelectCard";
 import { MultiSelectDropdownCard } from "./components/MultiSelectDropdownCard";
 import { SingleSelectCard } from "./components/SingleSelectCard";
+import { CompletionCard } from "./components/CompletionCard";
 
 const guides = ["Amos", "KG", "Tony", "Ness"];
 
@@ -370,24 +370,13 @@ function App() {
     const t = translations[language];
     return (
       <div className="min-h-screen bg-white flex items-center justify-center p-4 sm:p-6">
-        <Logo />
-        <div className="text-center space-y-4 sm:space-y-6">
-          <PawPrint className="w-12 h-12 sm:w-16 sm:h-16 mx-auto text-[#b4854b] animate-pulse" />
-          <h1 className="text-2xl sm:text-4xl font-bold text-gray-900">
-            {t.completion.title.replace("{name}", formState.fullName as string)}
-          </h1>
-          <p className="text-base sm:text-xl text-gray-600">
-            {t.completion.subtitle}
-          </p>
-          <a
-            href="https://tripmate.co.za"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block px-4 py-2 sm:px-6 sm:py-3 bg-[#b4854b] text-white rounded-lg hover:bg-[#8b6539] transition-colors duration-200 text-sm sm:text-base"
-          >
-            {t.completion.welcomePackButton}
-          </a>
-        </div>
+        <CompletionCard
+          title={t.completion.title}
+          subtitle={t.completion.subtitle}
+          googleButton={t.completion.googleButton}
+          tripadvisorButton={t.completion.tripadvisorButton}
+          firstName={formState.fullName as string}
+        />
       </div>
     );
   }
@@ -607,6 +596,20 @@ function App() {
             placeholder={question.placeholder || "Select..."}
           />
         </QuestionCard>
+      );
+    }
+    if (question.isThankYou) {
+      const firstName = (formState.fullName as string)?.split(" ")[0] || "";
+      return (
+        <CompletionCard
+          title={translations[language].completion.title}
+          subtitle={translations[language].completion.subtitle}
+          googleButton={translations[language].completion.googleButton}
+          tripadvisorButton={
+            translations[language].completion.tripadvisorButton
+          }
+          firstName={firstName}
+        />
       );
     }
     return (

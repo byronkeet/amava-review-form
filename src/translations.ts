@@ -61,6 +61,8 @@ export interface Translation {
     title: string;
     subtitle: string;
     welcomePackButton: string;
+    googleButton: string;
+    tripadvisorButton: string;
   };
   viewLink: {
     click: string;
@@ -160,8 +162,11 @@ export const translations: Record<LanguageCode, Translation> = {
       no: "No",
     },
     completion: {
-      title: "Thank you, {name}!",
-      subtitle: "We hope you enjoy your stay at Tuludi.",
+      title: "Thank you for your review, {name}",
+      subtitle:
+        "A public review makes a difference—it helps us grow and ensures others can enjoy the same unforgettable experience.",
+      googleButton: "Click for Google Reviews",
+      tripadvisorButton: "Click for TripAdvisor Reviews",
       welcomePackButton: "Click to view the Welcome Pack",
     },
     viewLink: {
@@ -248,8 +253,11 @@ export const translations: Record<LanguageCode, Translation> = {
       no: "No",
     },
     completion: {
-      title: "¡Gracias, {name}!",
-      subtitle: "Esperamos que disfrute su estancia en Tuludi.",
+      title: "Gracias por tu reseña, {name}",
+      subtitle:
+        "Una reseña pública hace la diferencia: nos ayuda a crecer y asegura que otros puedan disfrutar de la misma experiencia inolvidable.",
+      googleButton: "Haz clic para las reseñas de Google",
+      tripadvisorButton: "Haz clic para las reseñas de TripAdvisor",
       welcomePackButton: "Haga clic para ver el paquete de bienvenida",
     },
     viewLink: {
@@ -338,8 +346,11 @@ export const translations: Record<LanguageCode, Translation> = {
       no: "Non",
     },
     completion: {
-      title: "Merci, {name} !",
-      subtitle: "Nous espérons que vous apprécierez votre séjour à Tuludi.",
+      title: "Merci pour votre avis, {name}",
+      subtitle:
+        "Un avis public fait la différence—il nous aide à grandir et permet aux autres de profiter de la même expérience inoubliable.",
+      googleButton: "Cliquez pour les avis Google",
+      tripadvisorButton: "Cliquez pour les avis TripAdvisor",
       welcomePackButton: "Cliquez pour voir le pack de bienvenue",
     },
     viewLink: {
@@ -428,9 +439,12 @@ export const translations: Record<LanguageCode, Translation> = {
       no: "Nein",
     },
     completion: {
-      title: "Vielen Dank, {name}!",
-      subtitle: "Wir wünschen Ihnen einen angenehmen Aufenthalt in Tuludi.",
-      welcomePackButton: "Klicken Sie hier, um das Willkommenspaket anzusehen",
+      title: "Danke für Ihre Bewertung, {name}",
+      subtitle:
+        "Eine öffentliche Bewertung macht einen Unterschied—sie hilft uns zu wachsen und stellt sicher, dass andere das gleiche unvergessliche Erlebnis genießen können.",
+      googleButton: "Klicken Sie für Google-Bewertungen",
+      tripadvisorButton: "Klicken Sie für TripAdvisor-Bewertungen",
+      welcomePackButton: "Klicken Sie, um das Willkommenspaket anzusehen",
     },
     viewLink: {
       click: "Klicken Sie",
@@ -517,8 +531,11 @@ export const translations: Record<LanguageCode, Translation> = {
       no: "Nee",
     },
     completion: {
-      title: "Bedankt, {name}!",
-      subtitle: "We hopen dat u geniet van uw verblijf in Tuludi.",
+      title: "Bedankt voor uw beoordeling, {name}",
+      subtitle:
+        "Een openbare beoordeling maakt verschil—het helpt ons groeien en zorgt ervoor dat anderen dezelfde onvergetelijke ervaring kunnen beleven.",
+      googleButton: "Klik voor Google beoordelingen",
+      tripadvisorButton: "Klik voor TripAdvisor beoordelingen",
       welcomePackButton: "Klik om het welkomstpakket te bekijken",
     },
     viewLink: {
@@ -606,8 +623,11 @@ export const translations: Record<LanguageCode, Translation> = {
       no: "No",
     },
     completion: {
-      title: "Grazie, {name}!",
-      subtitle: "Speriamo che ti piaccia il tuo soggiorno a Tuludi.",
+      title: "Grazie per la tua recensione, {name}",
+      subtitle:
+        "Una recensione pubblica fa la differenza—ci aiuta a crescere e assicura che altri possano godere della stessa esperienza indimenticabile.",
+      googleButton: "Clicca per le recensioni Google",
+      tripadvisorButton: "Clicca per le recensioni TripAdvisor",
       welcomePackButton: "Clicca per vedere il pacchetto di benvenuto",
     },
     viewLink: {
@@ -695,8 +715,11 @@ export const translations: Record<LanguageCode, Translation> = {
       no: "Нет",
     },
     completion: {
-      title: "Спасибо, {name}!",
-      subtitle: "Надеемся, вам понравится ваше пребывание в Tuludi.",
+      title: "Спасибо за ваш отзыв, {name}",
+      subtitle:
+        "Публичный отзыв имеет значение—он помогает нам расти и гарантирует, что другие смогут насладиться таким же незабываемым опытом.",
+      googleButton: "Нажмите для отзывов Google",
+      tripadvisorButton: "Нажмите для отзывов TripAdvisor",
       welcomePackButton: "Нажмите, чтобы посмотреть приветственный пакет",
     },
     viewLink: {
@@ -778,9 +801,12 @@ export const translations: Record<LanguageCode, Translation> = {
       no: "否",
     },
     completion: {
-      title: "谢谢您，{name}！",
-      subtitle: "希望您享受在Tuludi的住宿。",
+      title: "感谢您的评价, {name}",
+      subtitle:
+        "公开评价带来改变—它帮助我们成长，确保他人也能享受同样难忘的体验。",
       welcomePackButton: "点击查看欢迎包",
+      googleButton: "点击查看谷歌评价",
+      tripadvisorButton: "点击查看猫途鹰评价",
     },
     viewLink: {
       click: "点击",
