@@ -4,7 +4,6 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface QuestionCardProps {
   question: string | JSX.Element;
-  children: React.ReactNode;
   currentIndex: number;
   totalQuestions: number;
   onBack?: () => void;
@@ -13,35 +12,40 @@ interface QuestionCardProps {
   showBackButton?: boolean;
   backText?: string;
   nextText?: string;
+  children: React.ReactNode;
 }
 
 export const QuestionCard: React.FC<QuestionCardProps> = ({
   question,
-  children,
   currentIndex,
   totalQuestions,
   onBack,
   onNext,
-  currentValue,
+  currentValue = "",
   showBackButton = true,
   backText = "Back",
   nextText = "Next",
+  children,
 }) => {
-  const canProgress = currentValue !== undefined && currentValue !== "";
+  const handleNext = () => {
+    if (onNext) {
+      onNext(currentValue);
+    }
+  };
 
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
-      className="max-w-2xl mx-auto w-full px-4 sm:px-0"
+      className="w-full max-w-2xl p-6 sm:p-8"
     >
       <div className="space-y-6 sm:space-y-8">
         <div className="space-y-4 sm:space-y-6">
           <h2 className="text-2xl sm:text-4xl font-bold text-gray-900">
             {question}
           </h2>
-          <div className="relative">{children}</div>
+          {children}
         </div>
         <div className="flex items-center justify-between text-gray-500 text-sm sm:text-base">
           <div className="flex items-center gap-2 sm:gap-4">
@@ -62,13 +66,8 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
             </span>
             {onNext && (
               <button
-                onClick={() => canProgress && onNext(currentValue)}
-                className={`flex items-center gap-1 sm:gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg transition-colors ${
-                  canProgress
-                    ? "text-[#b4854b] hover:bg-[#b4854b]/10"
-                    : "opacity-50 cursor-not-allowed text-gray-400"
-                }`}
-                disabled={!canProgress}
+                onClick={handleNext}
+                className="flex items-center gap-1 sm:gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg text-[#b4854b] hover:bg-[#b4854b]/10 transition-colors"
               >
                 {nextText}
                 <ChevronRight className="w-4 h-4" />
