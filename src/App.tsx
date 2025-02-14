@@ -46,6 +46,17 @@ const staffMembers = [
   "Sophia",
 ];
 
+const marketingSources = (lang: LanguageCode) => [
+  translations[lang].options.wordOfMouth,
+  translations[lang].options.travelAgent,
+  translations[lang].options.travelPlatform,
+  translations[lang].options.onlineAds,
+  translations[lang].options.websiteArticle,
+  translations[lang].options.previousVisit,
+  translations[lang].options.influencer,
+  translations[lang].options.other,
+];
+
 const createQuestions = (lang: LanguageCode): Question[] => [
   {
     id: "welcome",
@@ -184,6 +195,13 @@ const createQuestions = (lang: LanguageCode): Question[] => [
     type: "rating",
     question: translations[lang].questions.communicationRating,
     subtitle: translations[lang].questions.communicationRatingSubtitle,
+  },
+  {
+    id: "marketingSource",
+    type: "select",
+    question: translations[lang].questions.marketingSource,
+    placeholder: translations[lang].placeholders.marketingSource,
+    options: marketingSources(lang),
   },
   {
     id: "birthday",
@@ -596,6 +614,29 @@ function App() {
         />
       );
     }
+    if (question.type === "select") {
+      return (
+        <QuestionCard
+          question={question.question}
+          currentIndex={currentQuestion}
+          totalQuestions={questions.length}
+          onBack={handleBack}
+          onNext={handleNext}
+          currentValue={formState[question.id]}
+          backText={translations[language].buttons.back}
+          nextText={translations[language].buttons.next}
+        >
+          <Select
+            options={question.options || []}
+            value={(formState[question.id] as string) || ""}
+            onChange={(value) =>
+              setFormState((prev) => ({ ...prev, [question.id]: value }))
+            }
+            placeholder={question.placeholder || "Select..."}
+          />
+        </QuestionCard>
+      );
+    }
     return (
       <QuestionCard
         key={question.id}
@@ -609,14 +650,13 @@ function App() {
         backText={translations[language].buttons.back}
         nextText={isSubmitting ? "..." : translations[language].buttons.next}
       >
-        {question.type === "select" ? (
-          <Select
-            options={question.options || []}
+        {question.type === "date" ? (
+          <DatePicker
             value={(formState[question.id] as string) || ""}
             onChange={(value) =>
               setFormState((prev) => ({ ...prev, [question.id]: value }))
             }
-            placeholder={translations[language].placeholders.nationality}
+            placeholder={translations[language].placeholders.birthday}
           />
         ) : question.type === "checkbox" ? (
           <div className="grid gap-2 sm:gap-3">
@@ -642,14 +682,6 @@ function App() {
               </button>
             ))}
           </div>
-        ) : question.type === "date" ? (
-          <DatePicker
-            value={(formState[question.id] as string) || ""}
-            onChange={(value) =>
-              setFormState((prev) => ({ ...prev, [question.id]: value }))
-            }
-            placeholder={translations[language].placeholders.birthday}
-          />
         ) : question.type === "signature" ? (
           <div className="w-full max-w-2xl mx-auto px-4 sm:px-0">
             <SignaturePad

@@ -40,6 +40,8 @@ export interface Translation {
     communicationSubtitle: string;
     communicationRating: string;
     communicationRatingSubtitle: string;
+    marketingSource: string;
+    marketingSourceSubtitle: string;
   };
   placeholders: {
     fullName: string;
@@ -53,6 +55,7 @@ export interface Translation {
     guide: string;
     wildlifeComments: string;
     hospitalityComments: string;
+    marketingSource: string;
   };
   buttons: {
     next: string;
@@ -71,6 +74,16 @@ export interface Translation {
     click: string;
     here: string;
     toView: string;
+  };
+  options: {
+    wordOfMouth: string;
+    travelAgent: string;
+    travelPlatform: string;
+    onlineAds: string;
+    websiteArticle: string;
+    previousVisit: string;
+    influencer: string;
+    other: string;
   };
 }
 
@@ -137,6 +150,8 @@ export const translations: Record<LanguageCode, Translation> = {
       communicationRating: "Communication",
       communicationRatingSubtitle:
         "Rate our pre-arrival, check-in and daily communication.",
+      marketingSource: "How did you hear about Tuludi?",
+      marketingSourceSubtitle: "Choose as many as you like",
     },
     placeholders: {
       fullName: "Enter your full name",
@@ -150,6 +165,7 @@ export const translations: Record<LanguageCode, Translation> = {
       guide: "Select your guide",
       wildlifeComments: "Enter your comments here",
       hospitalityComments: "Enter your comments here",
+      marketingSource: "Select source",
     },
     buttons: {
       next: "Next",
@@ -168,6 +184,16 @@ export const translations: Record<LanguageCode, Translation> = {
       click: "Click",
       here: "here",
       toView: "to view",
+    },
+    options: {
+      wordOfMouth: "Word of Mouth",
+      travelAgent: "Travel Agent",
+      travelPlatform: "Online Travel Platform",
+      onlineAds: "Online Advertisement (Google, Social Media Ads)",
+      websiteArticle: "Website or Blog Article",
+      previousVisit: "Previous Visit to Another Natural Selection Camp",
+      influencer: "Influencer or Celebrity Endorsement",
+      other: "Other",
     },
   },
   es: {
@@ -221,6 +247,8 @@ export const translations: Record<LanguageCode, Translation> = {
       communicationRating: "Comunicación",
       communicationRatingSubtitle:
         "Evalúe nuestra comunicación previa a la llegada, el registro y la comunicación diaria.",
+      marketingSource: "¿Cómo se enteró de Tuludi?",
+      marketingSourceSubtitle: "Elija tantos como desee",
     },
     placeholders: {
       fullName: "Ingrese su nombre completo",
@@ -234,6 +262,7 @@ export const translations: Record<LanguageCode, Translation> = {
       guide: "Selecciona tu guía",
       wildlifeComments: "Ingrese sus comentarios aquí",
       hospitalityComments: "Ingrese sus comentarios aquí",
+      marketingSource: "Seleccionar fuente",
     },
     buttons: {
       next: "Siguiente",
@@ -252,6 +281,16 @@ export const translations: Record<LanguageCode, Translation> = {
       click: "Haga clic",
       here: "aquí",
       toView: "para ver",
+    },
+    options: {
+      wordOfMouth: "Recomendación Personal",
+      travelAgent: "Agente de Viajes",
+      travelPlatform: "Plataforma de Viajes en Línea",
+      onlineAds: "Publicidad en Línea (Google, Anuncios en Redes Sociales)",
+      websiteArticle: "Sitio Web o Artículo de Blog",
+      previousVisit: "Visita Previa a Otro Campamento de Natural Selection",
+      influencer: "Recomendación de Influencer o Celebridad",
+      other: "Otro",
     },
   },
   fr: {
@@ -306,6 +345,8 @@ export const translations: Record<LanguageCode, Translation> = {
       communicationRating: "Communication",
       communicationRatingSubtitle:
         "Évaluez notre communication avant l'arrivée, à l'enregistrement et au quotidien.",
+      marketingSource: "Comment avez-vous entendu parler de Tuludi ?",
+      marketingSourceSubtitle: "Choisissez autant que vous le souhaitez",
     },
     placeholders: {
       fullName: "Entrez votre nom complet",
@@ -319,6 +360,7 @@ export const translations: Record<LanguageCode, Translation> = {
       guide: "Sélectionnez votre guide",
       wildlifeComments: "Entrez vos commentaires ici",
       hospitalityComments: "Entrez vos commentaires ici",
+      marketingSource: "Sélectionner la source",
     },
     buttons: {
       next: "Suivant",
@@ -337,6 +379,16 @@ export const translations: Record<LanguageCode, Translation> = {
       click: "Cliquez",
       here: "ici",
       toView: "pour voir",
+    },
+    options: {
+      wordOfMouth: "Bouche à Oreille",
+      travelAgent: "Agent de Voyage",
+      travelPlatform: "Plateforme de Voyage en Ligne",
+      onlineAds: "Publicité en Ligne (Google, Réseaux Sociaux)",
+      websiteArticle: "Site Web ou Article de Blog",
+      previousVisit: "Visite Précédente dans un Autre Camp Natural Selection",
+      influencer: "Recommandation d'Influenceur ou de Célébrité",
+      other: "Autre",
     },
   },
   de: {
@@ -392,6 +444,8 @@ export const translations: Record<LanguageCode, Translation> = {
       communicationRating: "Kommunikation",
       communicationRatingSubtitle:
         "Bewerten Sie unsere Kommunikation vor der Ankunft, beim Check-in und im täglichen Ablauf.",
+      marketingSource: "Wie haben Sie von Tuludi erfahren?",
+      marketingSourceSubtitle: "Wählen Sie so viele wie Sie möchten",
     },
     placeholders: {
       fullName: "Geben Sie Ihren vollständigen Namen ein",
@@ -405,6 +459,7 @@ export const translations: Record<LanguageCode, Translation> = {
       guide: "Wählen Sie Ihren Guide",
       wildlifeComments: "Geben Sie hier Ihre Kommentare ein",
       hospitalityComments: "Geben Sie hier Ihre Kommentare ein",
+      marketingSource: "Quelle auswählen",
     },
     buttons: {
       next: "Weiter",
@@ -423,6 +478,16 @@ export const translations: Record<LanguageCode, Translation> = {
       click: "Klicken Sie",
       here: "hier",
       toView: "zum Ansehen",
+    },
+    options: {
+      wordOfMouth: "Mundpropaganda",
+      travelAgent: "Reisebüro",
+      travelPlatform: "Online-Reiseplattform",
+      onlineAds: "Online-Werbung (Google, Social Media)",
+      websiteArticle: "Website oder Blog-Artikel",
+      previousVisit: "Früherer Besuch in einem anderen Natural Selection Camp",
+      influencer: "Influencer oder Prominenten-Empfehlung",
+      other: "Andere",
     },
   },
   nl: {
@@ -476,6 +541,8 @@ export const translations: Record<LanguageCode, Translation> = {
       communicationRating: "Communicatie",
       communicationRatingSubtitle:
         "Beoordeel onze communicatie voor aankomst, bij inchecken en dagelijkse communicatie.",
+      marketingSource: "Hoe heeft u over Tuludi gehoord?",
+      marketingSourceSubtitle: "Kies zoveel als u wilt",
     },
     placeholders: {
       fullName: "Voer uw volledige naam in",
@@ -489,6 +556,7 @@ export const translations: Record<LanguageCode, Translation> = {
       guide: "Selecteer uw gids",
       wildlifeComments: "Voer hier uw opmerkingen in",
       hospitalityComments: "Voer hier uw opmerkingen in",
+      marketingSource: "Bron selecteren",
     },
     buttons: {
       next: "Volgende",
@@ -507,6 +575,16 @@ export const translations: Record<LanguageCode, Translation> = {
       click: "Klik",
       here: "hier",
       toView: "om te bekijken",
+    },
+    options: {
+      wordOfMouth: "Mond-tot-mond",
+      travelAgent: "Reisbureau",
+      travelPlatform: "Online Reisplatform",
+      onlineAds: "Online Advertenties (Google, Social Media)",
+      websiteArticle: "Website of Blog Artikel",
+      previousVisit: "Eerder Bezoek aan een Ander Natural Selection Kamp",
+      influencer: "Influencer of Celebrity Aanbeveling",
+      other: "Anders",
     },
   },
   it: {
@@ -560,6 +638,8 @@ export const translations: Record<LanguageCode, Translation> = {
       communicationRating: "Comunicazione",
       communicationRatingSubtitle:
         "Valuta la nostra comunicazione pre-arrivo, check-in e comunicazione quotidiana.",
+      marketingSource: "Come hai sentito parlare di Tuludi?",
+      marketingSourceSubtitle: "Scegli quante opzioni vuoi",
     },
     placeholders: {
       fullName: "Inserisci il tuo nome completo",
@@ -573,6 +653,7 @@ export const translations: Record<LanguageCode, Translation> = {
       guide: "Seleziona la tua guida",
       wildlifeComments: "Inserisci qui i tuoi commenti",
       hospitalityComments: "Inserisci qui i tuoi commenti",
+      marketingSource: "Seleziona fonte",
     },
     buttons: {
       next: "Avanti",
@@ -591,6 +672,16 @@ export const translations: Record<LanguageCode, Translation> = {
       click: "Clicca",
       here: "qui",
       toView: "per vedere",
+    },
+    options: {
+      wordOfMouth: "Passaparola",
+      travelAgent: "Agente di Viaggio",
+      travelPlatform: "Piattaforma di Viaggi Online",
+      onlineAds: "Pubblicità Online (Google, Social Media)",
+      websiteArticle: "Sito Web o Articolo Blog",
+      previousVisit: "Visita Precedente a un Altro Campo Natural Selection",
+      influencer: "Raccomandazione di Influencer o Celebrità",
+      other: "Altro",
     },
   },
   ru: {
@@ -644,6 +735,8 @@ export const translations: Record<LanguageCode, Translation> = {
       communicationRating: "Коммуникация",
       communicationRatingSubtitle:
         "Оцените нашу коммуникацию до прибытия, при регистрации и ежедневное общение.",
+      marketingSource: "Как вы узнали о Tuludi?",
+      marketingSourceSubtitle: "Выберите столько вариантов, сколько хотите",
     },
     placeholders: {
       fullName: "Введите ваше полное имя",
@@ -657,6 +750,7 @@ export const translations: Record<LanguageCode, Translation> = {
       guide: "Выберите вашего гида",
       wildlifeComments: "Введите ваши комментарии здесь",
       hospitalityComments: "Введите ваши комментарии здесь",
+      marketingSource: "Выберите источник",
     },
     buttons: {
       next: "Далее",
@@ -675,6 +769,16 @@ export const translations: Record<LanguageCode, Translation> = {
       click: "Нажмите",
       here: "здесь",
       toView: "чтобы посмотреть",
+    },
+    options: {
+      wordOfMouth: "Сарафанное радио",
+      travelAgent: "Турагент",
+      travelPlatform: "Онлайн-платформа для путешествий",
+      onlineAds: "Онлайн-реклама (Google, реклама в соцсетях)",
+      websiteArticle: "Веб-сайт или статья в блоге",
+      previousVisit: "Предыдущий визит в другой лагерь Natural Selection",
+      influencer: "Рекомендация инфлюенсера или знаменитости",
+      other: "Другое",
     },
   },
   zh: {
@@ -721,6 +825,8 @@ export const translations: Record<LanguageCode, Translation> = {
         "我们致力于倾听、学习和提升—您的声音确保我们不断提高标准。",
       communicationRating: "沟通",
       communicationRatingSubtitle: "评价我们的到达前、登记入住和日常沟通。",
+      marketingSource: "您是如何听说Tuludi的？",
+      marketingSourceSubtitle: "可以选择多个选项",
     },
     placeholders: {
       fullName: "请输入您的全名",
@@ -734,6 +840,7 @@ export const translations: Record<LanguageCode, Translation> = {
       guide: "选择您的向导",
       wildlifeComments: "在此输入您的评论",
       hospitalityComments: "在此输入您的评论",
+      marketingSource: "选择来源",
     },
     buttons: {
       next: "下一步",
@@ -752,6 +859,16 @@ export const translations: Record<LanguageCode, Translation> = {
       click: "点击",
       here: "这里",
       toView: "查看",
+    },
+    options: {
+      wordOfMouth: "口碑相传",
+      travelAgent: "旅行社",
+      travelPlatform: "在线旅游平台",
+      onlineAds: "在线广告（谷歌，社交媒体广告）",
+      websiteArticle: "网站或博客文章",
+      previousVisit: "之前参观过其他Natural Selection营地",
+      influencer: "网红或名人推荐",
+      other: "其他",
     },
   },
 };
