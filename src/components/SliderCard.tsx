@@ -6,7 +6,7 @@ interface SliderCardProps {
   question: string | JSX.Element;
   min: number;
   max: number;
-  defaultValue?: string;
+  defaultValue?: number;
   currentValue: number;
   onChange: (value: number) => void;
   currentIndex: number;

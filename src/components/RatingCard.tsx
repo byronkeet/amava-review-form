@@ -6,7 +6,7 @@ import { Circle } from "lucide-react";
 interface RatingCardProps {
   question: string | JSX.Element;
   subtitle?: string;
-  defaultValue?: string;
+  defaultValue?: number;
   currentValue?: number;
   onChange: (value: number) => void;
   currentIndex: number;

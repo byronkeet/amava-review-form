@@ -100,7 +100,7 @@ const createQuestions = (lang: LanguageCode): Question[] => {
       question: translations[lang].questions.wildlifeExperience,
       min: 0,
       max: 10,
-      defaultValue: "5",
+      defaultValue: 5,
     },
     {
       id: "guide",
@@ -113,7 +113,7 @@ const createQuestions = (lang: LanguageCode): Question[] => {
       id: "guideRating",
       type: "rating",
       question: translations[lang].questions.guideRating,
-      defaultValue: "1",
+      defaultValue: 1,
     },
     {
       id: "keySightings",
@@ -145,31 +145,31 @@ const createQuestions = (lang: LanguageCode): Question[] => {
       id: "accommodationRating",
       type: "rating",
       question: translations[lang].questions.accommodationRating,
-      defaultValue: "1",
+      defaultValue: 1,
     },
     {
       id: "facilitiesRating",
       type: "rating",
       question: translations[lang].questions.facilitiesRating,
-      defaultValue: "1",
+      defaultValue: 1,
     },
     {
       id: "foodRating",
       type: "rating",
       question: translations[lang].questions.foodRating,
-      defaultValue: "1",
+      defaultValue: 1,
     },
     {
       id: "housekeepingRating",
       type: "rating",
       question: translations[lang].questions.housekeepingRating,
-      defaultValue: "1",
+      defaultValue: 1,
     },
     {
       id: "staffRating",
       type: "rating",
       question: translations[lang].questions.staffRating,
-      defaultValue: "1",
+      defaultValue: 1,
     },
     {
       id: "staffStandout",
@@ -202,7 +202,7 @@ const createQuestions = (lang: LanguageCode): Question[] => {
       type: "rating",
       question: translations[lang].questions.communicationRating,
       subtitle: translations[lang].questions.communicationRatingSubtitle,
-      defaultValue: "1",
+      defaultValue: 1,
     },
     {
       id: "marketingSource",
@@ -224,7 +224,7 @@ const createQuestions = (lang: LanguageCode): Question[] => {
       question: translations[lang].questions.overallExperience,
       min: 0,
       max: 10,
-      defaultValue: "5",
+      defaultValue: 5,
     },
   ];
 };
@@ -240,6 +240,7 @@ function App() {
     staffRating: "1",
     communicationRating: "1",
     overallExperience: "0",
+    wildlifeExperience: "0",
   });
   const [isCompleted, setIsCompleted] = useState(false);
   const [language, setLanguage] = useState<LanguageCode>("en");
