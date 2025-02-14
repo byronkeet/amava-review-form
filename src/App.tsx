@@ -210,6 +210,13 @@ const createQuestions = (lang: LanguageCode): Question[] => [
     subtitle: translations[lang].questions.overallScoreSubtitle,
   },
   {
+    id: "overallExperience",
+    type: "slider",
+    question: translations[lang].questions.overallExperience,
+    min: 0,
+    max: 10,
+  },
+  {
     id: "birthday",
     type: "date",
     question: translations[lang].questions.birthday,
