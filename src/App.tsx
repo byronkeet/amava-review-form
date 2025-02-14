@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from "react";
 import { AnimatePresence } from "framer-motion";
-import { PawPrint, ExternalLink } from "lucide-react";
+import { PawPrint } from "lucide-react";
 import { Question, FormState, countries } from "./types";
 import { QuestionCard } from "./components/QuestionCard";
 import { ProgressBar } from "./components/ProgressBar";
@@ -215,64 +215,6 @@ const createQuestions = (lang: LanguageCode): Question[] => [
     question: translations[lang].questions.overallExperience,
     min: 0,
     max: 10,
-  },
-  {
-    id: "birthday",
-    type: "date",
-    question: translations[lang].questions.birthday,
-  },
-  {
-    id: "idNumber",
-    type: "text",
-    question: translations[lang].questions.idNumber,
-    placeholder: translations[lang].placeholders.idNumber,
-  },
-  {
-    id: "insurance",
-    type: "text",
-    question: translations[lang].questions.insurance,
-    placeholder: translations[lang].placeholders.insurance,
-  },
-  {
-    id: "hasChildren",
-    type: "checkbox",
-    question: translations[lang].questions.hasChildren,
-    options: [translations[lang].buttons.yes, translations[lang].buttons.no],
-  },
-  {
-    id: "childrenNames",
-    type: "text",
-    question: translations[lang].questions.childrenNames,
-    placeholder: translations[lang].placeholders.childrenNames,
-    conditional: {
-      dependsOn: "hasChildren",
-      showIf: true,
-    },
-  },
-  {
-    id: "termsAccepted",
-    type: "checkbox",
-    question: (
-      <div className="space-y-4">
-        <p>{translations[lang].questions.termsAccepted}</p>
-        <a
-          href="/terms-and-conditions.jpeg"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-[#b4854b] hover:text-[#8b6539] inline-flex items-center gap-1 text-sm sm:text-base font-light"
-        >
-          {translations[lang].viewLink.click} {translations[lang].viewLink.here}{" "}
-          {translations[lang].viewLink.toView}{" "}
-          <ExternalLink className="w-4 h-4" />
-        </a>
-      </div>
-    ),
-    options: [translations[lang].buttons.yes, translations[lang].buttons.no],
-  },
-  {
-    id: "signature",
-    type: "signature",
-    question: translations[lang].questions.signature,
   },
 ];
 
@@ -669,7 +611,6 @@ function App() {
             onChange={(value) =>
               setFormState((prev) => ({ ...prev, [question.id]: value }))
             }
-            placeholder={translations[language].placeholders.birthday}
           />
         ) : question.type === "checkbox" ? (
           <div className="grid gap-2 sm:gap-3">

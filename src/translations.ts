@@ -8,13 +8,6 @@ export interface Translation {
     fullName: string;
     email: string;
     nationality: string;
-    birthday: string;
-    idNumber: string;
-    insurance: string;
-    hasChildren: string;
-    childrenNames: string;
-    termsAccepted: string;
-    signature: string;
     travelAgent: string;
     experienceStatement: string;
     wildlifeExperience: string;
@@ -50,10 +43,6 @@ export interface Translation {
     fullName: string;
     email: string;
     nationality: string;
-    idNumber: string;
-    insurance: string;
-    childrenNames: string;
-    birthday: string;
     travelAgent: string;
     guide: string;
     wildlifeComments: string;
@@ -115,14 +104,6 @@ export const translations: Record<LanguageCode, Translation> = {
       email: "Email Address",
       nationality: "Nationality",
       travelAgent: "Name of Travel Agent",
-      birthday: "What is your date of birth?",
-      idNumber: "What is your ID/Passport Number?",
-      insurance: "What is your Insurance Provider & Policy Number?",
-      hasChildren: "Do you have children traveling with you?",
-      childrenNames: "What are the names of the children traveling with you?",
-      termsAccepted:
-        "I accept the terms & conditions of the Indemnity, Waiver & Disclaimer Form.",
-      signature: "Please sign below to complete the form",
       experienceStatement:
         ", we pride ourselves on giving a world class wildlife experience. Please rate the experience you had.",
       wildlifeExperience: "Overall Wildlife Experience",
@@ -165,10 +146,6 @@ export const translations: Record<LanguageCode, Translation> = {
       email: "name@example.com",
       nationality: "Select your nationality",
       travelAgent: "Enter your travel agent's name",
-      idNumber: "Enter your ID or passport number",
-      insurance: "e.g., Provider Name - Policy #12345",
-      childrenNames: "Enter children names",
-      birthday: "Select your date of birth",
       guide: "Select your guide",
       wildlifeComments: "Enter your comments here",
       hospitalityComments: "Enter your comments here",
@@ -214,15 +191,6 @@ export const translations: Record<LanguageCode, Translation> = {
       email: "Correo Electrónico",
       nationality: "Nacionalidad",
       travelAgent: "Nombre del Agente de Viajes",
-      birthday: "¿Cuál es su fecha de nacimiento?",
-      idNumber: "¿Cuál es su número de identificación/pasaporte?",
-      insurance: "¿Cuál es su proveedor de seguros y número de póliza?",
-      hasChildren: "¿Viaja con niños?",
-      childrenNames:
-        "¿Cuáles son los nombres de los niños que viajan con usted?",
-      termsAccepted:
-        "Acepto los términos y condiciones del Formulario de Indemnización, Renuncia y Descargo.",
-      signature: "Por favor firme abajo para completar el formulario",
       experienceStatement:
         ", nos enorgullecemos de ofrecer una experiencia de vida silvestre de clase mundial. Por favor, califique la experiencia que tuvo.",
       wildlifeExperience: "Experiencia General con la Vida Silvestre",
@@ -266,10 +234,6 @@ export const translations: Record<LanguageCode, Translation> = {
       email: "nombre@ejemplo.com",
       nationality: "Seleccione su nacionalidad",
       travelAgent: "Ingrese el nombre de su agente de viajes",
-      idNumber: "Ingrese su número de identificación o pasaporte",
-      insurance: "ej., Nombre del Proveedor - Póliza #12345",
-      childrenNames: "Ingrese los nombres de los niños",
-      birthday: "Seleccione su fecha de nacimiento",
       guide: "Selecciona tu guía",
       wildlifeComments: "Ingrese sus comentarios aquí",
       hospitalityComments: "Ingrese sus comentarios aquí",
@@ -315,14 +279,6 @@ export const translations: Record<LanguageCode, Translation> = {
       email: "Adresse Email",
       nationality: "Nationalité",
       travelAgent: "Nom de l'Agent de Voyage",
-      birthday: "Quelle est votre date de naissance ?",
-      idNumber: "Quel est votre numéro de carte d'identité/passeport ?",
-      insurance: "Quel est votre assureur et numéro de police ?",
-      hasChildren: "Voyagez-vous avec des enfants ?",
-      childrenNames: "Quels sont les noms des enfants qui voyagent avec vous ?",
-      termsAccepted:
-        "J'accepte les termes et conditions du formulaire d'indemnisation, de renonciation et de décharge.",
-      signature: "Veuillez signer ci-dessous pour compléter le formulaire",
       experienceStatement:
         ", nous sommes fiers d'offrir une expérience de la faune de classe mondiale. Veuillez évaluer l'expérience que vous avez eue.",
       wildlifeExperience: "Expérience Globale de la Faune",
@@ -368,10 +324,6 @@ export const translations: Record<LanguageCode, Translation> = {
       email: "nom@exemple.com",
       nationality: "Sélectionnez votre nationalité",
       travelAgent: "Entrez le nom de votre agent de voyage",
-      idNumber: "Entrez votre numéro de carte d'identité ou de passeport",
-      insurance: "ex., Nom de l'assureur - Police #12345",
-      childrenNames: "Entrez les noms des enfants",
-      birthday: "Sélectionnez votre date de naissance",
       guide: "Sélectionnez votre guide",
       wildlifeComments: "Entrez vos commentaires ici",
       hospitalityComments: "Entrez vos commentaires ici",
@@ -417,15 +369,6 @@ export const translations: Record<LanguageCode, Translation> = {
       email: "E-Mail-Adresse",
       nationality: "Nationalität",
       travelAgent: "Name des Reiseberaters",
-      birthday: "Was ist Ihr Geburtsdatum?",
-      idNumber: "Wie lautet Ihre Ausweis-/Passnummer?",
-      insurance: "Wie lauten Ihr Versicherungsanbieter und Ihre Policennummer?",
-      hasChildren: "Reisen Sie mit Kindern?",
-      childrenNames: "Wie heißen die Kinder, die mit Ihnen reisen?",
-      termsAccepted:
-        "Ich akzeptiere die Bedingungen des Entschädigungs-, Verzichts- und Haftungsausschlussformulars.",
-      signature:
-        "Bitte unterschreiben Sie unten, um das Formular abzuschließen",
       experienceStatement:
         ", wir sind stolz darauf, ein erstklassiges Wildtier-Erlebnis zu bieten. Bitte bewerten Sie Ihre Erfahrung.",
       wildlifeExperience: "Gesamte Wildlife-Erfahrung",
@@ -471,10 +414,6 @@ export const translations: Record<LanguageCode, Translation> = {
       email: "name@beispiel.com",
       nationality: "Wählen Sie Ihre Nationalität",
       travelAgent: "Geben Sie den Namen Ihres Reiseberaters ein",
-      idNumber: "Geben Sie Ihre Ausweis- oder Passnummer ein",
-      insurance: "z.B., Versicherungsname - Police #12345",
-      childrenNames: "Geben Sie die Namen der Kinder ein",
-      birthday: "Wählen Sie Ihr Geburtsdatum",
       guide: "Wählen Sie Ihren Guide",
       wildlifeComments: "Geben Sie hier Ihre Kommentare ein",
       hospitalityComments: "Geben Sie hier Ihre Kommentare ein",
@@ -520,14 +459,6 @@ export const translations: Record<LanguageCode, Translation> = {
       email: "E-mailadres",
       nationality: "Nationaliteit",
       travelAgent: "Naam Reisagent",
-      birthday: "Wat is uw geboortedatum?",
-      idNumber: "Wat is uw ID/paspoortnummer?",
-      insurance: "Wat is uw verzekeringsmaatschappij en polisnummer?",
-      hasChildren: "Reist u met kinderen?",
-      childrenNames: "Wat zijn de namen van de kinderen die met u meereizen?",
-      termsAccepted:
-        "Ik accepteer de voorwaarden van het vrijwarings-, afstands- en disclaimerformulier.",
-      signature: "Teken hieronder om het formulier te voltooien",
       experienceStatement:
         ", we zijn er trots op een wereldklasse wildlife-ervaring te bieden. Beoordeel alstublieft uw ervaring.",
       wildlifeExperience: "Algemene Wildlife Ervaring",
@@ -572,10 +503,6 @@ export const translations: Record<LanguageCode, Translation> = {
       email: "naam@voorbeeld.com",
       nationality: "Selecteer uw nationaliteit",
       travelAgent: "Voer de naam van uw reisagent in",
-      idNumber: "Voer uw ID- of paspoortnummer in",
-      insurance: "bijv., Verzekeraar - Polis #12345",
-      childrenNames: "Voer de namen van de kinderen in",
-      birthday: "Selecteer uw geboortedatum",
       guide: "Selecteer uw gids",
       wildlifeComments: "Voer hier uw opmerkingen in",
       hospitalityComments: "Voer hier uw opmerkingen in",
@@ -621,14 +548,6 @@ export const translations: Record<LanguageCode, Translation> = {
       email: "Indirizzo Email",
       nationality: "Nazionalità",
       travelAgent: "Nome dell'Agente di Viaggio",
-      birthday: "Qual è la tua data di nascita?",
-      idNumber: "Qual è il tuo numero di carta d'identità/passaporto?",
-      insurance: "Qual è il tuo assicuratore e numero di polizza?",
-      hasChildren: "Viaggi con bambini?",
-      childrenNames: "Quali sono i nomi dei bambini che viaggiano con te?",
-      termsAccepted:
-        "Accetto i termini e le condizioni del modulo di indennizzo, rinuncia e dichiarazione di non responsabilità.",
-      signature: "Per favore firma qui sotto per completare il modulo",
       experienceStatement:
         ", siamo orgogliosi di offrire un'esperienza naturalistica di livello mondiale. Per favore valuta l'esperienza che hai avuto.",
       wildlifeExperience: "Esperienza Complessiva della Fauna Selvatica",
@@ -673,10 +592,6 @@ export const translations: Record<LanguageCode, Translation> = {
       email: "nome@esempio.com",
       nationality: "Seleziona la tua nazionalità",
       travelAgent: "Inserisci il nome del tuo agente di viaggio",
-      idNumber: "Inserisci il tuo numero di carta d'identità o passaporto",
-      insurance: "es., Nome Assicuratore - Polizza #12345",
-      childrenNames: "Inserisci i nomi dei bambini",
-      birthday: "Seleziona la tua data di nascita",
       guide: "Seleziona la tua guida",
       wildlifeComments: "Inserisci qui i tuoi commenti",
       hospitalityComments: "Inserisci qui i tuoi commenti",
@@ -722,14 +637,6 @@ export const translations: Record<LanguageCode, Translation> = {
       email: "Электронная Почта",
       nationality: "Гражданство",
       travelAgent: "Имя Турагента",
-      birthday: "Какая у вас дата рождения?",
-      idNumber: "Какой у вас номер паспорта/удостоверения личности?",
-      insurance: "Кто ваш страховщик и номер полиса?",
-      hasChildren: "Путешествуете ли вы с детьми?",
-      childrenNames: "Как зовут детей, которые путешествуют с вами?",
-      termsAccepted:
-        "Я принимаю условия формы об освобождении от ответственности, отказе от претензий и оговорке.",
-      signature: "Пожалуйста, поставьте подпись ниже, чтобы завершить форму",
       experienceStatement:
         ", мы гордимся тем, что предоставляем первоклассный опыт наблюдения за дикой природой. Пожалуйста, оцените ваш опыт.",
       wildlifeExperience: "Общее Впечатление от Дикой Природы",
@@ -774,10 +681,6 @@ export const translations: Record<LanguageCode, Translation> = {
       email: "имя@пример.com",
       nationality: "Выберите ваше гражданство",
       travelAgent: "Введите имя вашего турагента",
-      idNumber: "Введите номер паспорта или удостоверения личности",
-      insurance: "напр., Название страховщика - Полис #12345",
-      childrenNames: "Введите имена детей",
-      birthday: "Выберите дату рождения",
       guide: "Выберите вашего гида",
       wildlifeComments: "Введите ваши комментарии здесь",
       hospitalityComments: "Введите ваши комментарии здесь",
@@ -823,13 +726,6 @@ export const translations: Record<LanguageCode, Translation> = {
       email: "电子邮件地址",
       nationality: "国籍",
       travelAgent: "旅行社代理人姓名",
-      birthday: "您的出生日期是什么？",
-      idNumber: "您的身份证/护照号码是什么？",
-      insurance: "您的保险公司和保单号码是什么？",
-      hasChildren: "您是否携带儿童旅行？",
-      childrenNames: "与您同行的儿童姓名是什么？",
-      termsAccepted: "我接受赔偿、豁免和免责声明表格的条款和条件。",
-      signature: "请在下方签名以完成表格",
       experienceStatement:
         "，我们以提供世界级的野生动物体验为荣。请为您的体验打分。",
       wildlifeExperience: "整体野生动物体验",
@@ -868,10 +764,6 @@ export const translations: Record<LanguageCode, Translation> = {
       email: "name@example.com",
       nationality: "选择您的国籍",
       travelAgent: "请输入您的旅行社代理人姓名",
-      idNumber: "输入您的身份证或护照号码",
-      insurance: "例如：保险公司名称 - 保单 #12345",
-      childrenNames: "输入儿童姓名",
-      birthday: "选择您的出生日期",
       guide: "选择您的向导",
       wildlifeComments: "在此输入您的评论",
       hospitalityComments: "在此输入您的评论",
