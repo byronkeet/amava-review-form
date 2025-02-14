@@ -189,6 +189,7 @@ const createQuestions = (lang: LanguageCode): Question[] => [
     type: "statement",
     question: translations[lang].questions.communicationStatement,
     subtitle: translations[lang].questions.communicationSubtitle,
+    showName: false,
   },
   {
     id: "communicationRating",
@@ -208,6 +209,7 @@ const createQuestions = (lang: LanguageCode): Question[] => [
     type: "statement",
     question: translations[lang].questions.overallScoreStatement,
     subtitle: translations[lang].questions.overallScoreSubtitle,
+    showName: false,
   },
   {
     id: "overallExperience",
@@ -419,15 +421,16 @@ function App() {
     if (question.type === "statement") {
       return (
         <StatementCard
-          name={(formState.fullName as string) || ""}
-          statement={question.question}
+          name={(formState.fullName as string) || undefined}
+          statement={question.question as string}
           subtitle={question.subtitle}
           currentIndex={currentQuestion}
           totalQuestions={questions.length}
           onBack={handleBack}
-          onNext={() => handleNext("started")}
+          onNext={handleNext}
           backText={translations[language].buttons.back}
           nextText={translations[language].buttons.next}
+          showName={!question.id.includes("overallScore")}
         />
       );
     }

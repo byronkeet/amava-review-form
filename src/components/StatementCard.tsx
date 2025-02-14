@@ -3,15 +3,16 @@ import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface StatementCardProps {
-  name: string;
+  name?: string;
   statement: string | JSX.Element;
   subtitle?: string;
   currentIndex: number;
   totalQuestions: number;
   onBack?: () => void;
-  onNext?: (value: string | boolean) => void;
+  onNext?: (value: boolean) => void;
   backText: string;
   nextText: string;
+  showName?: boolean;
 }
 
 export const StatementCard: React.FC<StatementCardProps> = ({
@@ -24,6 +25,7 @@ export const StatementCard: React.FC<StatementCardProps> = ({
   onNext,
   backText,
   nextText,
+  showName = true,
 }) => {
   const firstName = name?.split(" ")[0] || "";
 
@@ -37,7 +39,7 @@ export const StatementCard: React.FC<StatementCardProps> = ({
       <div className="space-y-6">
         <div className="space-y-4">
           <p className="text-gray-700 text-lg sm:text-xl">
-            <span className="font-bold">{firstName}</span>
+            {showName && <span className="font-bold">{firstName}</span>}
             {statement}
           </p>
           {subtitle && (
