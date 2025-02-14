@@ -42,6 +42,8 @@ export interface Translation {
     communicationRatingSubtitle: string;
     marketingSource: string;
     marketingSourceSubtitle: string;
+    overallScoreStatement: string;
+    overallScoreSubtitle: string;
   };
   placeholders: {
     fullName: string;
@@ -152,6 +154,8 @@ export const translations: Record<LanguageCode, Translation> = {
         "Rate our pre-arrival, check-in and daily communication.",
       marketingSource: "How did you hear about Tuludi?",
       marketingSourceSubtitle: "Choose as many as you like",
+      overallScoreStatement: 'How we measured up.',
+      overallScoreSubtitle: "Your overall trip score reflects the magic of your experience—from the thrill of the wild to the warmth of our hospitality. Every detail matters, and we're curious to know how we measured up!",
     },
     placeholders: {
       fullName: "Enter your full name",
@@ -249,6 +253,8 @@ export const translations: Record<LanguageCode, Translation> = {
         "Evalúe nuestra comunicación previa a la llegada, el registro y la comunicación diaria.",
       marketingSource: "¿Cómo se enteró de Tuludi?",
       marketingSourceSubtitle: "Elija tantos como desee",
+      overallScoreStatement: '¿Cómo lo hicimos?',
+      overallScoreSubtitle: 'La puntuación general de tu viaje refleja la magia de tu experiencia, desde la emoción de la naturaleza hasta la calidez de nuestra hospitalidad. Cada detalle importa, ¡y nos interesa saber cómo lo hicimos!',
     },
     placeholders: {
       fullName: "Ingrese su nombre completo",
@@ -347,6 +353,8 @@ export const translations: Record<LanguageCode, Translation> = {
         "Évaluez notre communication avant l'arrivée, à l'enregistrement et au quotidien.",
       marketingSource: "Comment avez-vous entendu parler de Tuludi ?",
       marketingSourceSubtitle: "Choisissez autant que vous le souhaitez",
+      overallScoreStatement: 'Comment nous avons répondu à vos attentes.',
+      overallScoreSubtitle: 'Votre note globale reflète la magie de votre expérience, de l\'émotion de la nature à la chaleur de notre hospitalité. Chaque détail compte, et nous sommes curieux de savoir comment nous avons répondu à vos attentes !',
     },
     placeholders: {
       fullName: "Entrez votre nom complet",
@@ -446,6 +454,8 @@ export const translations: Record<LanguageCode, Translation> = {
         "Bewerten Sie unsere Kommunikation vor der Ankunft, beim Check-in und im täglichen Ablauf.",
       marketingSource: "Wie haben Sie von Tuludi erfahren?",
       marketingSourceSubtitle: "Wählen Sie so viele wie Sie möchten",
+      overallScoreStatement: 'Wie wir abgeschnitten haben.',
+      overallScoreSubtitle: 'Ihre Gesamtbewertung spiegelt die Magie Ihres Erlebnisses wider—vom Nervenkitzel der Wildnis bis zur Wärme unserer Gastfreundschaft. Jedes Detail zählt, und wir sind gespannt zu erfahren, wie wir abgeschnitten haben!',
     },
     placeholders: {
       fullName: "Geben Sie Ihren vollständigen Namen ein",
@@ -543,6 +553,8 @@ export const translations: Record<LanguageCode, Translation> = {
         "Beoordeel onze communicatie voor aankomst, bij inchecken en dagelijkse communicatie.",
       marketingSource: "Hoe heeft u over Tuludi gehoord?",
       marketingSourceSubtitle: "Kies zoveel als u wilt",
+      overallScoreStatement: 'Hoe we hebben gepresteerd.',
+      overallScoreSubtitle: 'Uw algemene reisscore weerspiegelt de magie van uw ervaring—van de spanning van het wild tot de warmte van onze gastvrijheid. Elk detail telt, en we zijn benieuwd hoe we hebben gepresteerd!',
     },
     placeholders: {
       fullName: "Voer uw volledige naam in",
@@ -640,6 +652,8 @@ export const translations: Record<LanguageCode, Translation> = {
         "Valuta la nostra comunicazione pre-arrivo, check-in e comunicazione quotidiana.",
       marketingSource: "Come hai sentito parlare di Tuludi?",
       marketingSourceSubtitle: "Scegli quante opzioni vuoi",
+      overallScoreStatement: 'Come ci siamo misurati.',
+      overallScoreSubtitle: 'Il punteggio complessivo del tuo viaggio riflette la magia della tua esperienza—dall\'emozione della natura selvaggia al calore della nostra ospitalità. Ogni dettaglio conta, e siamo curiosi di sapere come ci siamo misurati!',
     },
     placeholders: {
       fullName: "Inserisci il tuo nome completo",
@@ -737,6 +751,8 @@ export const translations: Record<LanguageCode, Translation> = {
         "Оцените нашу коммуникацию до прибытия, при регистрации и ежедневное общение.",
       marketingSource: "Как вы узнали о Tuludi?",
       marketingSourceSubtitle: "Выберите столько вариантов, сколько хотите",
+      overallScoreStatement: 'Как мы справились.',
+      overallScoreSubtitle: 'Общая оценка вашего путешествия отражает магию вашего опыта—от захватывающих встреч с дикой природой до теплоты нашего гостеприимства. Каждая деталь имеет значение, и нам интересно узнать, как мы справились!',
     },
     placeholders: {
       fullName: "Введите ваше полное имя",
@@ -827,6 +843,8 @@ export const translations: Record<LanguageCode, Translation> = {
       communicationRatingSubtitle: "评价我们的到达前、登记入住和日常沟通。",
       marketingSource: "您是如何听说Tuludi的？",
       marketingSourceSubtitle: "可以选择多个选项",
+      overallScoreStatement: '我们的表现如何。',
+      overallScoreSubtitle: '您的整体旅行评分反映了您体验的魔力—从野外的刺激到我们热情的款待。每个细节都很重要，我们很想知道我们的表现如何！',
     },
     placeholders: {
       fullName: "请输入您的全名",

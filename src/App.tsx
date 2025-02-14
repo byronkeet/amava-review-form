@@ -204,6 +204,12 @@ const createQuestions = (lang: LanguageCode): Question[] => [
     options: marketingSources(lang),
   },
   {
+    id: "overallScoreStatement",
+    type: "statement",
+    question: translations[lang].questions.overallScoreStatement,
+    subtitle: translations[lang].questions.overallScoreSubtitle,
+  },
+  {
     id: "birthday",
     type: "date",
     question: translations[lang].questions.birthday,
