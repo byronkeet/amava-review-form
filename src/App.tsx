@@ -251,22 +251,36 @@ function App() {
   const handleSubmit = useCallback(async () => {
     setIsSubmitting(true);
     try {
-      const { error } = await supabase.from("indemnity").insert([
+      const { error } = await supabase.from("review").insert([
         {
           language,
           full_name: formState.fullName as string,
           email: formState.email as string,
           nationality: formState.nationality as string,
-          birthday: formState.birthday as string,
-          id_number: formState.idNumber as string,
-          insurance: formState.insurance as string,
-          has_children: formState.hasChildren === true,
-          children_names:
-            formState.hasChildren === true
-              ? (formState.childrenNames as string)
-              : null,
-          terms_accepted: formState.termsAccepted === true,
-          signature: formState.signature as string,
+          travel_agent: formState.travelAgent as string,
+          wildlife_experience: formState.wildlifeExperience as string,
+          guide: formState.guide as string,
+          guide_rating: formState.guideRating as string,
+          key_sightings: formState.keySightings
+            ? JSON.parse(formState.keySightings as string)
+            : [],
+          activities: formState.activities
+            ? JSON.parse(formState.activities as string)
+            : [],
+          wildlife_comments: formState.wildlifeComments as string,
+          accommodation_rating: formState.accommodationRating as string,
+          facilities_rating: formState.facilitiesRating as string,
+          food_rating: formState.foodRating as string,
+          housekeeping_rating: formState.housekeepingRating as string,
+          staff_rating: formState.staffRating as string,
+          staff_standout: formState.staffStandout
+            ? JSON.parse(formState.staffStandout as string)
+            : [],
+          hospitality_comments: formState.hospitalityComments as string,
+          recommend_tuludi: formState.recommendTuludi as string,
+          communication_rating: formState.communicationRating as string,
+          marketing_source: formState.marketingSource as string,
+          overall_experience: formState.overallExperience as string,
         },
       ]);
 
@@ -284,7 +298,7 @@ function App() {
     } finally {
       setIsSubmitting(false);
     }
-  }, [formState, language, setIsSubmitting, setIsCompleted]);
+  }, [formState, language]);
 
   const handleNext = useCallback(
     (value: string | boolean) => {
