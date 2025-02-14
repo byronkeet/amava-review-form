@@ -162,11 +162,11 @@ export const translations: Record<LanguageCode, Translation> = {
       no: "No",
     },
     completion: {
-      title: "Thank you for your review, {name}",
+      title: "Thank you for your review, {name}!",
       subtitle:
         "A public review makes a difference—it helps us grow and ensures others can enjoy the same unforgettable experience.",
       googleButton: "Click for Google Reviews",
-      tripadvisorButton: "Click for TripAdvisor Reviews",
+      tripadvisorButton: "Click for Tripadvisor Reviews",
       welcomePackButton: "Click to view the Welcome Pack",
     },
     viewLink: {
@@ -257,7 +257,7 @@ export const translations: Record<LanguageCode, Translation> = {
       subtitle:
         "Una reseña pública hace la diferencia: nos ayuda a crecer y asegura que otros puedan disfrutar de la misma experiencia inolvidable.",
       googleButton: "Haz clic para las reseñas de Google",
-      tripadvisorButton: "Haz clic para las reseñas de TripAdvisor",
+      tripadvisorButton: "Haz clic para las reseñas de Tripadvisor",
       welcomePackButton: "Haga clic para ver el paquete de bienvenida",
     },
     viewLink: {
@@ -350,7 +350,7 @@ export const translations: Record<LanguageCode, Translation> = {
       subtitle:
         "Un avis public fait la différence—il nous aide à grandir et permet aux autres de profiter de la même expérience inoubliable.",
       googleButton: "Cliquez pour les avis Google",
-      tripadvisorButton: "Cliquez pour les avis TripAdvisor",
+      tripadvisorButton: "Cliquez pour les avis Tripadvisor",
       welcomePackButton: "Cliquez pour voir le pack de bienvenue",
     },
     viewLink: {
@@ -443,7 +443,7 @@ export const translations: Record<LanguageCode, Translation> = {
       subtitle:
         "Eine öffentliche Bewertung macht einen Unterschied—sie hilft uns zu wachsen und stellt sicher, dass andere das gleiche unvergessliche Erlebnis genießen können.",
       googleButton: "Klicken Sie für Google-Bewertungen",
-      tripadvisorButton: "Klicken Sie für TripAdvisor-Bewertungen",
+      tripadvisorButton: "Klicken Sie für Tripadvisor-Bewertungen",
       welcomePackButton: "Klicken Sie, um das Willkommenspaket anzusehen",
     },
     viewLink: {
@@ -535,7 +535,7 @@ export const translations: Record<LanguageCode, Translation> = {
       subtitle:
         "Een openbare beoordeling maakt verschil—het helpt ons groeien en zorgt ervoor dat anderen dezelfde onvergetelijke ervaring kunnen beleven.",
       googleButton: "Klik voor Google beoordelingen",
-      tripadvisorButton: "Klik voor TripAdvisor beoordelingen",
+      tripadvisorButton: "Klik voor Tripadvisor beoordelingen",
       welcomePackButton: "Klik om het welkomstpakket te bekijken",
     },
     viewLink: {
@@ -627,7 +627,7 @@ export const translations: Record<LanguageCode, Translation> = {
       subtitle:
         "Una recensione pubblica fa la differenza—ci aiuta a crescere e assicura che altri possano godere della stessa esperienza indimenticabile.",
       googleButton: "Clicca per le recensioni Google",
-      tripadvisorButton: "Clicca per le recensioni TripAdvisor",
+      tripadvisorButton: "Clicca per le recensioni Tripadvisor",
       welcomePackButton: "Clicca per vedere il pacchetto di benvenuto",
     },
     viewLink: {
@@ -719,7 +719,7 @@ export const translations: Record<LanguageCode, Translation> = {
       subtitle:
         "Публичный отзыв имеет значение—он помогает нам расти и гарантирует, что другие смогут насладиться таким же незабываемым опытом.",
       googleButton: "Нажмите для отзывов Google",
-      tripadvisorButton: "Нажмите для отзывов TripAdvisor",
+      tripadvisorButton: "Нажмите для отзывов Tripadvisor",
       welcomePackButton: "Нажмите, чтобы посмотреть приветственный пакет",
     },
     viewLink: {

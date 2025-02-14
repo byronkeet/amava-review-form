@@ -372,14 +372,15 @@ function App() {
 
   if (isCompleted) {
     const t = translations[language];
+    const firstName = (formState.fullName as string)?.split(" ")[0] || "";
     return (
       <div className="min-h-screen bg-white flex items-center justify-center p-4 sm:p-6">
         <CompletionCard
-          title={t.completion.title}
+          title={t.completion.title.replace("{name}", firstName)}
           subtitle={t.completion.subtitle}
           googleButton={t.completion.googleButton}
           tripadvisorButton={t.completion.tripadvisorButton}
-          firstName={formState.fullName as string}
+          firstName={firstName}
         />
       </div>
     );
@@ -436,7 +437,7 @@ function App() {
           onNext={handleNext}
           backText={translations[language].buttons.back}
           nextText={translations[language].buttons.next}
-          showName={!question.id.includes("overallScore")}
+          showName={question.showName !== false}
         />
       );
     }
@@ -605,7 +606,10 @@ function App() {
       const firstName = (formState.fullName as string)?.split(" ")[0] || "";
       return (
         <CompletionCard
-          title={translations[language].completion.title}
+          title={translations[language].completion.title.replace(
+            "{name}",
+            firstName
+          )}
           subtitle={translations[language].completion.subtitle}
           googleButton={translations[language].completion.googleButton}
           tripadvisorButton={
