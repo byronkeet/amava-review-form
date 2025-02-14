@@ -90,11 +90,6 @@ const createQuestions = (lang: LanguageCode): Question[] => {
       placeholder: translations[lang].placeholders.travelAgent,
     },
     {
-      id: "experienceStatement",
-      type: "statement",
-      question: translations[lang].questions.experienceStatement,
-    },
-    {
       id: "wildlifeExperience",
       type: "slider",
       question: translations[lang].questions.wildlifeExperience,
@@ -134,12 +129,6 @@ const createQuestions = (lang: LanguageCode): Question[] => {
       type: "text",
       question: translations[lang].questions.wildlifeComments,
       placeholder: translations[lang].placeholders.wildlifeComments,
-    },
-    {
-      id: "hospitalityStatement",
-      type: "statement",
-      question: translations[lang].questions.hospitalityStatement,
-      subtitle: translations[lang].questions.hospitalitySubtitle,
     },
     {
       id: "accommodationRating",
@@ -191,13 +180,6 @@ const createQuestions = (lang: LanguageCode): Question[] => {
       options: [translations[lang].buttons.yes, translations[lang].buttons.no],
     },
     {
-      id: "communicationStatement",
-      type: "statement",
-      question: translations[lang].questions.communicationStatement,
-      subtitle: translations[lang].questions.communicationSubtitle,
-      showName: false,
-    },
-    {
       id: "communicationRating",
       type: "rating",
       question: translations[lang].questions.communicationRating,
@@ -210,13 +192,6 @@ const createQuestions = (lang: LanguageCode): Question[] => {
       question: translations[lang].questions.marketingSource,
       placeholder: translations[lang].placeholders.marketingSource,
       options: marketingSources(lang),
-    },
-    {
-      id: "overallScoreStatement",
-      type: "statement",
-      question: translations[lang].questions.overallScoreStatement,
-      subtitle: translations[lang].questions.overallScoreSubtitle,
-      showName: false,
     },
     {
       id: "overallExperience",
@@ -270,7 +245,7 @@ function App() {
   const handleSubmit = useCallback(async () => {
     setIsSubmitting(true);
     try {
-      const { data, error } = await supabase
+      const { error } = await supabase
         .from("review")
         .insert([
           {
