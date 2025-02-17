@@ -201,6 +201,12 @@ const createQuestions = (lang: LanguageCode): Question[] => {
       max: 10,
       defaultValue: 5,
     },
+    {
+      id: "finalComments",
+      type: "text",
+      question: translations[lang].questions.finalComments,
+      placeholder: translations[lang].placeholders.finalComments,
+    },
   ];
 };
 
@@ -277,6 +283,7 @@ function App() {
             communication_rating: formState.communicationRating as string,
             marketing_source: formState.marketingSource as string,
             overall_experience: formState.overallExperience as string,
+            final_comments: formState.finalComments as string,
           },
         ])
         .select();

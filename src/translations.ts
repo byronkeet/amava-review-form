@@ -38,6 +38,7 @@ export interface Translation {
     overallScoreStatement: string;
     overallScoreSubtitle: string;
     overallExperience: string;
+    finalComments: string;
   };
   placeholders: {
     fullName: string;
@@ -48,6 +49,7 @@ export interface Translation {
     wildlifeComments: string;
     hospitalityComments: string;
     marketingSource: string;
+    finalComments: string;
   };
   buttons: {
     next: string;
@@ -142,6 +144,7 @@ export const translations: Record<LanguageCode, Translation> = {
       overallScoreSubtitle:
         "Your overall trip score reflects the magic of your experience—from the thrill of the wild to the warmth of our hospitality. Every detail matters, and we're curious to know how we measured up!",
       overallExperience: "Overall Trip Experience",
+      finalComments: "Any final comments or recommendations?",
     },
     placeholders: {
       fullName: "Enter your full name",
@@ -152,6 +155,7 @@ export const translations: Record<LanguageCode, Translation> = {
       wildlifeComments: "Enter your comments here",
       hospitalityComments: "Enter your comments here",
       marketingSource: "Select source",
+      finalComments: "Enter your comments here",
     },
     buttons: {
       next: "Next",
@@ -233,6 +237,7 @@ export const translations: Record<LanguageCode, Translation> = {
       overallScoreSubtitle:
         "La puntuación general de tu viaje refleja la magia de tu experiencia, desde la emoción de la naturaleza hasta la calidez de nuestra hospitalidad. Cada detalle importa, ¡y nos interesa saber cómo lo hicimos!",
       overallExperience: "Experiencia General del Viaje",
+      finalComments: "¿Algún comentario o recomendación final?",
     },
     placeholders: {
       fullName: "Ingrese su nombre completo",
@@ -243,6 +248,7 @@ export const translations: Record<LanguageCode, Translation> = {
       wildlifeComments: "Ingrese sus comentarios aquí",
       hospitalityComments: "Ingrese sus comentarios aquí",
       marketingSource: "Seleccionar fuente",
+      finalComments: "Ingresa tus comentarios aquí",
     },
     buttons: {
       next: "Siguiente",
@@ -326,6 +332,7 @@ export const translations: Record<LanguageCode, Translation> = {
       overallScoreSubtitle:
         "Votre note globale reflète la magie de votre expérience, de l'émotion de la nature à la chaleur de notre hospitalité. Chaque détail compte, et nous sommes curieux de savoir comment nous avons répondu à vos attentes !",
       overallExperience: "Expérience Globale du Voyage",
+      finalComments: "Commentaires ou recommandations finales ?",
     },
     placeholders: {
       fullName: "Entrez votre nom complet",
@@ -336,6 +343,7 @@ export const translations: Record<LanguageCode, Translation> = {
       wildlifeComments: "Entrez vos commentaires ici",
       hospitalityComments: "Entrez vos commentaires ici",
       marketingSource: "Sélectionner la source",
+      finalComments: "Inserisci qui i tuoi commenti",
     },
     buttons: {
       next: "Suivant",
@@ -419,6 +427,7 @@ export const translations: Record<LanguageCode, Translation> = {
       overallScoreSubtitle:
         "Ihre Gesamtbewertung spiegelt die Magie Ihres Erlebnisses wider—vom Nervenkitzel der Wildnis bis zur Wärme unserer Gastfreundschaft. Jedes Detail zählt, und wir sind gespannt zu erfahren, wie wir abgeschnitten haben!",
       overallExperience: "Gesamte Reiseerfahrung",
+      finalComments: "Es gibt weitere kommentare oder empfehlungen?",
     },
     placeholders: {
       fullName: "Geben Sie Ihren vollständigen Namen ein",
@@ -429,6 +438,7 @@ export const translations: Record<LanguageCode, Translation> = {
       wildlifeComments: "Geben Sie hier Ihre Kommentare ein",
       hospitalityComments: "Geben Sie hier Ihre Kommentare ein",
       marketingSource: "Quelle auswählen",
+      finalComments: "Inserisci qui i tuoi commenti",
     },
     buttons: {
       next: "Weiter",
@@ -511,6 +521,7 @@ export const translations: Record<LanguageCode, Translation> = {
       overallScoreSubtitle:
         "Uw algemene reisscore weerspiegelt de magie van uw ervaring—van de spanning van het wild tot de warmte van onze gastvrijheid. Elk detail telt, en we zijn benieuwd hoe we hebben gepresteerd!",
       overallExperience: "Algemene Reiservaring",
+      finalComments: "Es gibt weitere kommentare oder empfehlungen?",
     },
     placeholders: {
       fullName: "Voer uw volledige naam in",
@@ -521,6 +532,7 @@ export const translations: Record<LanguageCode, Translation> = {
       wildlifeComments: "Voer hier uw opmerkingen in",
       hospitalityComments: "Voer hier uw opmerkingen in",
       marketingSource: "Bron selecteren",
+      finalComments: "Inserisci qui i tuoi commenti",
     },
     buttons: {
       next: "Volgende",
@@ -603,6 +615,7 @@ export const translations: Record<LanguageCode, Translation> = {
       overallScoreSubtitle:
         "Il punteggio complessivo del tuo viaggio riflette la magia della tua esperienza—dall'emozione della natura selvaggia al calore della nostra ospitalità. Ogni dettaglio conta, e siamo curiosi di sapere come ci siamo misurati!",
       overallExperience: "Esperienza Complessiva del Viaggio",
+      finalComments: "Commenti o raccomandazioni finali?",
     },
     placeholders: {
       fullName: "Inserisci il tuo nome completo",
@@ -613,6 +626,7 @@ export const translations: Record<LanguageCode, Translation> = {
       wildlifeComments: "Inserisci qui i tuoi commenti",
       hospitalityComments: "Inserisci qui i tuoi commenti",
       marketingSource: "Seleziona fonte",
+      finalComments: "Inserisci qui i tuoi commenti",
     },
     buttons: {
       next: "Avanti",
@@ -695,6 +709,8 @@ export const translations: Record<LanguageCode, Translation> = {
       overallScoreSubtitle:
         "Общая оценка вашего путешествия отражает магию вашего опыта—от захватывающих встреч с дикой природой до теплоты нашего гостеприимства. Каждая деталь имеет значение, и нам интересно узнать, как мы справились!",
       overallExperience: "Общее Впечатление от Поездки",
+      finalComments:
+        "Есть ли у вас заключительные комментарии или рекомендации?",
     },
     placeholders: {
       fullName: "Введите ваше полное имя",
@@ -705,6 +721,7 @@ export const translations: Record<LanguageCode, Translation> = {
       wildlifeComments: "Введите ваши комментарии здесь",
       hospitalityComments: "Введите ваши комментарии здесь",
       marketingSource: "Выберите источник",
+      finalComments: "Введите ваши комментарии здесь",
     },
     buttons: {
       next: "Далее",
@@ -781,6 +798,7 @@ export const translations: Record<LanguageCode, Translation> = {
       overallScoreSubtitle:
         "您的整体旅行评分反映了您体验的魔力—从野外的刺激到我们热情的款待。每个细节都很重要，我们很想知道我们的表现如何！",
       overallExperience: "整体旅行体验",
+      finalComments: "有任何最终意见或建议吗？",
     },
     placeholders: {
       fullName: "请输入您的全名",
@@ -791,6 +809,7 @@ export const translations: Record<LanguageCode, Translation> = {
       wildlifeComments: "在此输入您的评论",
       hospitalityComments: "在此输入您的评论",
       marketingSource: "选择来源",
+      finalComments: "在此输入您的评论",
     },
     buttons: {
       next: "下一步",
